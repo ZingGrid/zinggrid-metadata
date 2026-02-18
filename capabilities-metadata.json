@@ -1,0 +1,5345 @@
+{
+  "zg-button": [
+    {
+      "scope": "zg-button",
+      "id": "action",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "custom-disabled",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "custom-tooltip",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "disabled",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "force-border",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "handler",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-button",
+      "id": "icon",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-caption": [
+    {
+      "scope": "zg-caption",
+      "id": "align",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-caption",
+      "id": "position",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-card": [
+    {
+      "scope": "zg-card",
+      "id": "editor",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            [
+              "zing-grid:layout",
+              "zing-grid:layout-controls"
+            ],
+            [
+              "zing-grid:editor",
+              "zing-grid:editor-controls"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "editor"
+      ],
+      "required": false,
+      "notes": "L"
+    },
+    {
+      "scope": "zg-card",
+      "id": "editor-template",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            [
+              "zing-grid:layout",
+              "zing-grid:layout-controls"
+            ],
+            [
+              "zing-grid:editor",
+              "zing-grid:editor-controls"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "editor"
+      ],
+      "required": false,
+      "notes": "L"
+    },
+    {
+      "scope": "zg-card",
+      "id": "renderer",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "zing-grid:layout",
+            "zing-grid:layout-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "renderer-template"
+      ],
+      "required": false,
+      "notes": "L"
+    },
+    {
+      "scope": "zg-card",
+      "id": "renderer-template",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "zing-grid:layout",
+            "zing-grid:layout-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "renderer"
+      ],
+      "required": false,
+      "notes": "L"
+    }
+  ],
+  "zg-checkbox": [
+    {
+      "scope": "zg-checkbox",
+      "id": "checked",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-column": [
+    {
+      "scope": "zg-column",
+      "id": "align",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "array-index",
+      "requiredAttributes": {
+        "allOf": [
+          "index"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "array-slice",
+      "requiredAttributes": {
+        "allOf": [
+          "array-index"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "button-border",
+      "requiredAttributes": {
+        "allOf": [
+          "zg-column:type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-break",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-class",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-action",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-delay",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-icon",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "cell-tooltip-template",
+        "cell-tooltip-text"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "cell-tooltip-renderer",
+        "cell-tooltip-text"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-text",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "cell-tooltip-renderer",
+        "cell-tooltip-template"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "cell-tooltip-type",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "content-style",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "content-width",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "type:iframe",
+            "type:image"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "default-display",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "zing-grid:data",
+            "zing-grid:src",
+            "zg-data:data",
+            "zg-data:src",
+            "zg-param:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "details-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "details-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "drag",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "editor",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "editor-template",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor",
+            "type:editor",
+            "zing-grid:editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-buttons",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-conditions",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-conditions-display",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-conditions-max",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-default-condition",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-index",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "index",
+            "filter"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-key",
+      "requiredAttributes": {
+        "allOf": [
+          "filter",
+          "zg-param:name:serverFilter"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-menu-areas",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-on",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-selectbox-display",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-trigger",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filterer",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "foot-cell",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "frozen",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "group",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "layout:card"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "group-head-cell",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "group",
+            "type:row-group",
+            "zing-grid:group-by"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "head-cell",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-auto-format",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-icon-position",
+      "requiredAttributes": {
+        "allOf": [
+          "header-icon"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-action",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-delay",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-icon",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-icon-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-tooltip-template",
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-text",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-tooltip-renderer",
+        "header-tooltip-template",
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-trigger",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "header-tooltip-type",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "headerIcon",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "hidden",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "index",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "locale",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "menu-text",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:columns-control"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "min-width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "renderer-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "required",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor",
+            "type:editor",
+            "editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "resizable",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "resizable-max-width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "resizable-min-width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "resizablePersistent",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "search",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "separator",
+      "requiredAttributes": {
+        "allOf": [
+          "index"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "sort",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "sort-asc",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "sort-desc",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "sort-intl",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "sorter",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-aggregate-omit",
+      "requiredAttributes": {
+        "allOf": [
+          "type:aggregate"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-aggregate-value",
+      "requiredAttributes": {
+        "allOf": [
+          "type:aggregate"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-disabled",
+      "requiredAttributes": {
+        "allOf": [
+          "type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-handler",
+      "requiredAttributes": {
+        "allOf": [
+          "type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-icon",
+      "requiredAttributes": {
+        "allOf": [
+          "type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-label",
+      "requiredAttributes": {
+        "allOf": [
+          "type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-tooltip",
+      "requiredAttributes": {
+        "allOf": [
+          "type:button"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-button-url",
+      "requiredAttributes": {
+        "allOf": [
+          "type:column"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-checkbox-label",
+      "requiredAttributes": {
+        "allOf": [
+          "type:checkbox"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-color-mode",
+      "requiredAttributes": {
+        "allOf": [
+          "type:color"
+        ],
+        "oneOf": [
+          [
+            "editor",
+            "type:editor",
+            "zing-grid:editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-color-preview",
+      "requiredAttributes": {
+        "allOf": [
+          "type:color",
+          "type:color"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-color-spaces",
+      "requiredAttributes": {
+        "allOf": [
+          "type:color"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-currency",
+      "requiredAttributes": {
+        "allOf": [
+          "type:currency"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-date-format",
+      "requiredAttributes": {
+        "allOf": [
+          "type:date"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-date-from-now",
+      "requiredAttributes": {
+        "allOf": [
+          "type:date"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-element-attribute-name",
+      "requiredAttributes": {
+        "allOf": [
+          "type:element",
+          "type-element-tag-name"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-element-tag-name",
+      "requiredAttributes": {
+        "allOf": [
+          "type:element"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-emoji-shortcode",
+      "requiredAttributes": {
+        "allOf": [
+          "type:emoji"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-group-hide-count",
+      "requiredAttributes": {
+        "oneOf": [
+          "type:row-group"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-group-plural",
+      "requiredAttributes": {
+        "allOf": [
+          "group",
+          "type:row-group"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-iframe-ratio",
+      "requiredAttributes": {
+        "allOf": [
+          "type:iframe"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-image-alt",
+      "requiredAttributes": {
+        "allOf": [
+          "type:image"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-image-mask",
+      "requiredAttributes": {
+        "allOf": [
+          "type:image"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-image-src",
+      "requiredAttributes": {
+        "allOf": [
+          "type:image"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-number-decimals",
+      "requiredAttributes": {
+        "allOf": [
+          "type:number"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-number-formatting",
+      "requiredAttributes": {
+        "allOf": [
+          "type:number"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-number-max-decimals",
+      "requiredAttributes": {
+        "allOf": [
+          "type:number"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-number-min-decimals",
+      "requiredAttributes": {
+        "allOf": [
+          "type:number"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-radio-options",
+      "requiredAttributes": {
+        "allOf": [
+          "type:radio"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-range-max",
+      "requiredAttributes": {
+        "allOf": [
+          "type:range"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-range-min",
+      "requiredAttributes": {
+        "allOf": [
+          "type:range"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-range-step",
+      "requiredAttributes": {
+        "allOf": [
+          "type:range"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-row-details-renderer",
+      "requiredAttributes": {
+        "allOf": [
+          "type:row-details"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-row-details-template",
+      "requiredAttributes": {
+        "allOf": [
+          "type:row-details"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-select-default-value",
+      "requiredAttributes": {
+        "allOf": [
+          "type:select"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-select-multiple",
+      "requiredAttributes": {
+        "allOf": [
+          "type:select"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-select-options",
+      "requiredAttributes": {
+        "allOf": [
+          "type:select"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-selector-page-persist",
+      "requiredAttributes": {
+        "allOf": [
+          "type:selector"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-toggle-options",
+      "requiredAttributes": {
+        "allOf": [
+          "type:toggle"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-toggle-render-value",
+      "requiredAttributes": {
+        "allOf": [
+          "type:toggle"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-url-icon",
+      "requiredAttributes": {
+        "allOf": [
+          "type:url",
+          "type-url-src"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-url-src",
+      "requiredAttributes": {
+        "allOf": [
+          "type:url"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-url-target",
+      "requiredAttributes": {
+        "allOf": [
+          "type:url",
+          "type-url-src"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "type-url-text",
+      "requiredAttributes": {
+        "allOf": [
+          "type:url",
+          "type-url-src"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "validation-error-message",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor",
+            "type:editor",
+            "zing-grid:editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": "E"
+    },
+    {
+      "scope": "zg-column",
+      "id": "validation-required-message",
+      "requiredAttributes": {
+        "allOf": [
+          "required"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-column:type": [
+    {
+      "scope": "zg-column:type",
+      "id": "aggregate",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "boolean",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "button",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "checkbox",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "color",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "currency",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "custom",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "date",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "duplicate",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "editor",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "element",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "email",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "emoji",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "icon",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "image",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "iframe",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "number",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "password",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "percentage",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "radio",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "range",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "remover",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "row-details",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "row-group",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "row-number",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "select",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "selector",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "tel",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "text",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "toggle",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column:type",
+      "id": "url",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-data": [
+    {
+      "scope": "zg-data",
+      "id": "adapter",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zg-param:name:adapter"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-data",
+      "id": "data",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "src",
+        "zing-grid:data",
+        "zing-grid:src",
+        "zg-param:name:src"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-data",
+      "id": "id-key",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-data",
+      "id": "options",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-data",
+      "id": "src",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "data",
+        "zing-grid:data",
+        "zing-grid:src",
+        "zg-param:name:src"
+      ],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-dialog": [
+    {
+      "scope": "zg-dialog",
+      "id": "cancel",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-dialog",
+      "id": "confirm",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-dialog",
+      "id": "label",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-dialog",
+      "id": "open",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-icon": [
+    {
+      "scope": "zg-icon",
+      "id": "name",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-input": [
+    {
+      "scope": "zg-input",
+      "id": "action",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-input",
+      "id": "type",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-input",
+      "id": "value",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-menu": [
+    {
+      "scope": "zg-menu",
+      "id": "replace",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "zing-grid:context-menu",
+            "zing-grid:static-menu"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-pager": [
+    {
+      "scope": "zg-pager",
+      "id": "page-size",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager",
+        "zing-grid:page-size"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "page-size-card",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager",
+        "zing-grid:page-size-card"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "page-size-row",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager",
+        "zing-grid:page-size-row"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "pager-type",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager",
+        "zing-grid:pager-type"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "pagerButtonLimit",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "position",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager zing-grid:pager-position"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-pager",
+      "id": "size-options",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:pager",
+        "zing-grid:page-size-options",
+        "zg-select:options"
+      ],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-param": [
+    {
+      "scope": "zg-param",
+      "id": "name",
+      "requiredAttributes": {
+        "allOf": [
+          "value"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param",
+      "id": "value",
+      "requiredAttributes": {
+        "allOf": [
+          "name"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-param:name": [
+    {
+      "scope": "zg-param:name",
+      "id": "adapter",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "idKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "newIndexPath",
+      "requiredAttributes": {
+        "allOf": [
+          "src",
+          "createSrc",
+          "zg-data:src",
+          "zing-grid:src"
+        ],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "recordPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:data",
+            "zg-data:src",
+            "zing-grid:data",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "nodePath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:data",
+            "zg-data:src",
+            "zing-grid:data",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "searchKey",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:search"
+        ],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "search",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:search"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "serverFilter",
+      "requiredAttributes": {
+        "allOf": [
+          "loadByPage"
+        ],
+        "oneOf": [
+          [
+            [
+              "zg-column:filter",
+              "zing-grid:filter"
+            ],
+            [
+              "src",
+              "readSrc",
+              "zg-data:src",
+              "zing-grid:src"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "filterFunction",
+      "requiredAttributes": {
+        "allOf": [
+          "loadByPage"
+        ],
+        "oneOf": [
+          [
+            [
+              "zg-column:filter",
+              "zing-grid:filter"
+            ],
+            [
+              "src",
+              "readSrc",
+              "zg-data:src",
+              "zing-grid:src"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "sortByKey",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:sort"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "sortBy",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:sort"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "sortDirKey",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:sort"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "sortDir",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:sort"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "batchEditStatus",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:batch-edit"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "startAtKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            [
+              "nextPath",
+              "nextIDPath",
+              "prevPath",
+              "nextIDPath",
+              "pageKey"
+            ],
+            [
+              "loadByPage",
+              "loadByScroll"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "startAtValue",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "limitToKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "limitTo",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "offsetKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "offsetValue",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "pageKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "countPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "cursor",
+      "requiredAttributes": {
+        "allOf": [
+          "loadByPage"
+        ],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "loadByPage",
+      "requiredAttributes": {
+        "allOf": [
+          "limitToKey"
+        ],
+        "oneOf": [
+          [
+            [
+              "nextPath",
+              "nextIDPath",
+              "pageKey",
+              "prevPath",
+              "prevIDPath",
+              "startAtKey"
+            ],
+            [
+              "zg-pager",
+              "zing-grid:pager"
+            ],
+            [
+              "src",
+              "readSrc",
+              "zg-data:src",
+              "zing-grid:src"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "loadByScroll",
+      "requiredAttributes": {
+        "allOf": [
+          "zing-grid:height"
+        ],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "hasNextPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "nextPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "nextIDPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "nextIDKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "hasPrevPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "prevPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "prevIDPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "prevIDKey",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "pageBase",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "selectorKey",
+      "requiredAttributes": {
+        "allOf": [
+          "loadByPage",
+          "zing-grid:type-selector-pager-persist"
+        ],
+        "oneOf": [
+          [
+            [
+              "zg-column:type:selector",
+              "zing-grid:row-selector"
+            ],
+            [
+              "zg-pager",
+              "zing-grid:pager"
+            ],
+            [
+              "src",
+              "readSrc",
+              "zg-data:src",
+              "zing-grid:src"
+            ]
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "csvCaption",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "csvDelimiter",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "csvHeader",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "csvLineSeparator",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "tableHide",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "tableHead",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "tableDataFormat",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "tableHeadFormat",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "collection",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "subscription",
+      "requiredAttributes": {
+        "allOf": [
+          "collection"
+        ],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "dataTable",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "createOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "readOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateRowOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateCellOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "deleteOptions",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "src",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:data",
+        "zing-grid:src",
+        "zg-data:data",
+        "zg-data:src"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "createSrc",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "readSrc",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateRowSrc",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateCellSrc",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "deleteSrc",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "restmode",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "method",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "createMethod",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "readMethod",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateRowMethod",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateCellMethod",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "deleteMethod",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "headers",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "queryString",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "body",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "bodyMethodSuffix",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "createBody",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "readBody",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateRowBody",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateCellBody",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "deleteBody",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "createCustomFunction",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "readCustomFunction",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateCellCustomFunction",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "updateRowCustomFunction",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "deleteCustomFunction",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "serverErrorMessage",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "serverErrorPath",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "exclude",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "cdataEscape",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "requestType",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "responseType",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "dataType",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          []
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "urlSuffix",
+      "requiredAttributes": {
+        "allOf": [],
+        "oneOf": [
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "restmode:manual"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "mode",
+      "requiredAttributes": {
+        "allOf": []
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-select": [
+    {
+      "scope": "zg-select",
+      "id": "action",
+      "requiredAttributes": {
+        "allOf": [
+          "value",
+          "options"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-select",
+      "id": "options",
+      "requiredAttributes": {
+        "allOf": [
+          "action",
+          "value"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-select",
+      "id": "value",
+      "requiredAttributes": {
+        "allOf": [
+          "action",
+          "options"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-source": [
+    {
+      "scope": "zg-source",
+      "id": "position",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "zing-grid:source"
+      ],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-text": [
+    {
+      "scope": "zg-text",
+      "id": "value",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zg-text:value": [
+    {
+      "scope": "zg-text:value",
+      "id": "currpage",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-text:value",
+      "id": "pagecount",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-text:value",
+      "id": "pagesize",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-text:value",
+      "id": "startrow",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-text:value",
+      "id": "endrow",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-text:value",
+      "id": "rowcount",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ],
+  "zing-grid": [
+    {
+      "scope": "zing-grid",
+      "id": "aggregate",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "align",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "batch-edit",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "batch-edit-status",
+      "requiredAttributes": {
+        "allOf": [
+          "batch-edit"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "button-tooltip-disabled",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "caption",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "card",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "layout",
+            "layout-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-card:renderer",
+        "zg-card:editor",
+        "zg-card:renderer-template",
+        "zg-card:editor-template"
+      ],
+      "required": false,
+      "notes": "L"
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-break",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-class",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-editor",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-focus",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-action",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "zg-column:cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-delay",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "zg-column:cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-icon",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "zg-column:cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "zg-column:cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "cell-tooltip-template"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "cell-tooltip-renderer"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "cell-tooltip-type",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "cell-tooltip-renderer",
+            "cell-tooltip-template",
+            "zg-column:cell-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "col-class",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-drag",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-drag-action",
+      "requiredAttributes": {
+        "oneOf": [
+          "column-drag"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-resizable",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-resizable-max-width",
+      "requiredAttributes": {
+        "allOf": [
+          "column-resizable"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-resizable-min-width",
+      "requiredAttributes": {
+        "allOf": [
+          "column-resizable"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-resizable-persistent",
+      "requiredAttributes": {
+        "allOf": [
+          "column-resizable"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "columns",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "columns-control",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "compact",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "row-height"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "config",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "confirm-delete",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor-controls",
+            "zg-column:type:remover"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "confirmations",
+      "requiredAttributes": {
+        "allOf": [
+          "batch-edit"
+        ],
+        "oneOf": [
+          [
+            "editor-controls",
+            "zg-column:remover"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "context-menu",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "creator",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor-controls",
+            "zg-column:type:creator"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "data",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "src",
+        "zg-data:data",
+        "zg-data:src",
+        "zg-param:name:src"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "default-display",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "data",
+            "src",
+            "zg-data:data",
+            "zg-data:src",
+            "zg-param:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "dialog",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "batch-edit",
+            "editor:modal",
+            "editor-controls",
+            "zg-column:type:remover"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "dir",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "editor",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "editor-controls",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "editor-disabled-fields",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "batch-edit",
+            "editor",
+            "editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-buttons",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-conditions",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-conditions-display",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-conditions-max",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-default-condition",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-menu-areas",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-on",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-selectbox-display",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-trigger",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter"
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "foot-class",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "aggregate",
+            "frozen-rows-bottom",
+            "zg-column:foot-cell",
+            "zg-column:type:aggregate"
+          ],
+          [
+            "frozen-rows-bottom",
+            "zg-column:foot-cell"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-columns-left",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-columns-right",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-row-class",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "frozen-rows-bottom",
+            "frozen-rows-top"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-rows-bottom",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-rows-top",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "gridlines",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "group-by",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "layout:card"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "head-class",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "frozen-rows-top",
+            "zg-column:group-head-cell",
+            "zg-column:head-cell"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": "H"
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-auto-format",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-row-hide",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "column-drag",
+        "column-resizable",
+        "filter:menu",
+        "filter:both",
+        "head-class",
+        "header-tooltip-renderer",
+        "header-tooltip-template",
+        "sort",
+        ""
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-action",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-delay",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-icon",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-icon-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-position",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-tooltip-template",
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-tooltip-renderer",
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-trigger",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "header-tooltip-type",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "header-tooltip-renderer",
+            "header-tooltip-template",
+            "zg-column:header-tooltip-text"
+          ]
+        ]
+      },
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "height",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "icon-set",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "lang",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "layout",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "layout-controls",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "loading",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "data",
+            "src",
+            "zg-data:data",
+            "zg-data:src",
+            "zg-param:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "loading-text",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "loadmask",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "src",
+            "zg-data:src",
+            "zg-param:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "nested-data-separator",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "no-data",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "page-size",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:page-size"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "page-size-card",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:page-size-card"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "page-size-options",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:page-size-option",
+        "zg-select:options"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "page-size-row",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:page-size-row"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "pager",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "pager-button-limit",
+      "requiredAttributes": {
+        "allOf": [
+          "pager",
+          "pager-type"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:pager-buttom-limit"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "pager-position",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:pager-position"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "pager-type",
+      "requiredAttributes": {
+        "allOf": [
+          "pager"
+        ]
+      },
+      "disallowedAttributes": [
+        "zg-pager:pager-type"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "params",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "preserve-state-id",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "preserve-state-load",
+      "requiredAttributes": {
+        "allOf": [
+          "preserve-state-id"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "preserve-state-options",
+      "requiredAttributes": {
+        "allOf": [
+          "preserve-state-id"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "preserve-state-save",
+      "requiredAttributes": {
+        "allOf": [
+          "preserve-state-id"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "record-count",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "record-duplicate",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "record-key",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "data",
+            "src",
+            "zg-data:data",
+            "zg-data:src",
+            "zg-param:name:src"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-class",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-details-renderer",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-details-template",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-height",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "compact"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-height-scope",
+      "requiredAttributes": {
+        "allOf": [
+          "row-height"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-selector",
+      "requiredAttributes": {
+        "allOf": [
+          "editor-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "search",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "selector",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "server-rendered",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "sort",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "sort-intl",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "sorter",
+      "requiredAttributes": {
+        "allOf": [
+          "sort"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "source",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "src",
+      "requiredAttributes": {},
+      "disallowedAttributes": [
+        "data",
+        "zg-data:data",
+        "zg-data:src",
+        "zg-param:name:src"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "static-menu",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "status-delay",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "status-persist",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "status-position",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "template-end-delimiter",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "template-start-delimiter",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "theme",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "type-selector-page-persist",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "row-selector",
+            "zg-column:type:selector"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "validation-error-message",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "editor",
+            "editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": "E"
+    },
+    {
+      "scope": "zing-grid",
+      "id": "validation-required-message",
+      "requiredAttributes": {
+        "allOf": [
+          "zg-column:required"
+        ],
+        "oneOf": [
+          [
+            "editor",
+            "editor-controls"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "viewport",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "viewport-pause",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "viewport-stop",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "viewport-types",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "width",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "zebra",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    }
+  ]
+}
