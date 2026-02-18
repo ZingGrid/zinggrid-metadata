@@ -1,6 +1,8 @@
 # ZingGrid Metadata
 
-This repository contains the capabilities metadata and feature registry for ZingGrid.
+This repository contains the content model schema, capabilities metadata and feature registry for ZingGrid.
+
+The content model schema defines the allowed parent–child relationships between elements, specifying which elements may contain or be nested within others.
 
 The capabilities metadata defines the configuration contract for each component, including required and disallowed attributes.
 
