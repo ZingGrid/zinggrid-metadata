@@ -1,0 +1,27 @@
+{
+  "name": "zinggrid-metadata",
+  "version": "1.0.0",
+  "zinggridVersion": "2.1.5",
+  "description": "Capabilities metadata and features registry for ZingGrid.",
+  "keywords": [
+    "zinggrid",
+    "custom-elements",
+    "capabilities-metadata",
+    "features-registry",
+    "metadata",
+    "web-components"
+  ],
+  "files": [
+    "capabilities-metadata.json",
+    "features-registry.json",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZingGrid/zinggrid-metadata.git"
+  },
+  "author": "ZingSoft",
+  "peerDependencies": {
+    "zinggrid": ">=2.1.5"
+  },
+  "type": "module"
+}
