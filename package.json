@@ -13,7 +13,7 @@
   ],
   "files": [
     "capabilities-metadata.json",
-    "features-registry.json",
+    "features-registry.json"
   ],
   "repository": {
     "type": "git",
