@@ -5,6 +5,7 @@
       "description": "The `<zg-batch-edit>` element is used to define the batch edit region.  \n`<zg-batch-edit>` is created internally and should not be placed directly in the user's HTML; however,\nthe user can style the `<zg-batch-edit>` using the `zg-batch-edit` selector.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -12,15 +13,28 @@
       "description": "`<zg-body>` is created dynamically by the ZingGrid library, and as such should not be manually added by the\ndeveloper.  However the user can style `<zg-body>` using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
       "name": "zg-button",
       "description": "A custom, styled button that can be used both for internal grid-related action and for user-specific\nactions. It is stylable via CSS. Some buttons are automatically inserted when a feature that uses it enabled, like `pager`, while\nothers are inserted manually by the user.",
       "allowedChildren": [
-        "zg-icon"
+        "zg-icon",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-no-data",
+        "zg-pager",
+        "zg-source"
+      ],
       "requiredAttributes": []
     },
     {
@@ -36,6 +50,10 @@
         "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-footer",
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -47,9 +65,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -57,6 +79,7 @@
       "description": "`<zg-cell>` is the container for a single cell;\nit corresponds to the `<td>` tag on an HTML table.  It is automatically inserted and should not \nbe placed directly in the user's HTML.  `<zg-cell>` can be styled via CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -64,6 +87,7 @@
       "description": "`<zg-cell-overflow>` elements can be used to add popup data to each cell on a user action.  Typical use would\nbe a custom element select and optionlist.  As a generated element, developers\nshould not manually place `<zg-cell-overflow>` in their grid; however, they may style the tooltips and\nits internal elements using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -71,6 +95,18 @@
       "description": "A checkbox is automatically inserted when\na feature that uses it is enabled, like `<zg-column type=\"selector\">`, or it can be manually-inserted\nto the grid. It can be styled via CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-menu",
+        "zg-no-data",
+        "zg-pager",
+        "zg-source"
+      ],
       "requiredAttributes": []
     },
     {
@@ -79,7 +115,12 @@
       "allowedChildren": [
         "zg-column"
       ],
-      "requiredChildren": [],
+      "requiredChildren": [
+        "zg-column"
+      ],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -91,9 +132,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-colgroup"
+      ],
       "requiredAttributes": []
     },
     {
@@ -101,6 +146,7 @@
       "description": "The column resize handle appears when hovering over header to\nresize the column.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -108,6 +154,7 @@
       "description": "The `<zg-control-bar>` is inserted dynamically by the ZingGrid library\nand serves as a container for the grid's interface controls.  As a generated element, developers\nshould not manually place `<zg-control-bar>` in their grid; however, they may style the bar and\nits internal elements using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -117,6 +164,9 @@
         "zg-param"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -128,9 +178,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -138,6 +192,7 @@
       "description": "`<zg-editor-row>` holds the details of the edit mode for the grid.\n`<zg-editor-row>` is created internally and should not be placed directly in the user's HTML.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -145,6 +200,7 @@
       "description": "`<zg-filter>` is the container for a single cell when the cell contains a filter.\n`<zg-filter>` is created internally and should not be placed directly in the user's HTML; however,\nthe user can style the `<zg-filter>` using the `zg-filter` selector.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -152,6 +208,7 @@
       "description": "The `<zg-filter-menu>` element is a container for the menu that appears when clicking the column filter button.  \nThe element is dynamically inserted by the library.\nThe element can be styled using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -159,6 +216,7 @@
       "description": "The `<zg-focus>` element is a generated element added to `<zing-grid>`\nwhen the `selector` attribute is defined.  It is used as a container for the focus of cell(s) \nand used as a CSS target for styling by the developer.  It should not be accessed specifically\nbeyond styling.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -166,6 +224,7 @@
       "description": "The `<zg-foot>` tag contains the foot cells (`<zg-foot-cell>`) of the data \ngrid specified via the `foot-cell` attribute found on `<zg-column>` tags.  The tag roughly\ncorresponds to the idea of the `<tfoot>` tag used in HTML tables.  The `<zg-foot>` tag is \ngenerated by the library and should not be placed in a grid manually by a developer, but\ninstead is used as a styling target for CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -179,9 +238,13 @@
         "zg-input",
         "zg-select",
         "zg-source",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -189,6 +252,7 @@
       "description": "The `<zg-frozen-colgroup>` element is used to define the frozen columns.  \n`<zg-frozen-colgroup>` is created internally and should not be placed directly in the user's HTML; however,\nthe user can style the `<zg-frozen-colgroup>` using the `zg-frozen-colgroup` selector.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -196,6 +260,7 @@
       "description": "The `<zg-head>` tag contains the head cells (`<zg-head-cell>`) of the data grid specified via the\n`head-cell` attribute found on `<zg-column>` tags.  The tag roughly corresponds to the idea of the `<thead>` tag used in\nHTML tables.  The `<zg-head>` tag is generated by the library and should not be placed in a grid manually by a developer. Instead, it is used as a styling target for CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -203,6 +268,7 @@
       "description": "The `<zg-head-cell>` contains header information for a column and is roughly equivalent to the `<th>` \ntag used for HTML tables.  The `<zg-head-cell>` tag is generated by the library and should not be placed in a grid \nmanually by a developer. It can be used as a styling target for CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -210,6 +276,7 @@
       "description": "`<zg-header>` is the semantic container placed at the top of the grid\nto hold various grid items.  `<zg-header>` is created internally and should not be placed\ndirectly in the user's HTML.  The element can be styled via CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -217,6 +284,18 @@
       "description": "`<zg-icon>` is used to display custom ZingGrid icons within the grid.  \nThe icon is set by its name, but can have a different look based on the grid's theme.  \n`<zg-icon>` is created internally when a feature that uses it is enabled, like `pager`, \nbut can be included in the grid manually as long as the name attribute exists.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-menu",
+        "zg-no-data",
+        "zg-pager",
+        "zg-source"
+      ],
       "requiredAttributes": []
     },
     {
@@ -224,6 +303,18 @@
       "description": "`<zg-input>` contains input fields with added ZingGrid-specific functionality.\nThe specific functionality can be set via the `action` attribute.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-menu",
+        "zg-no-data",
+        "zg-pager",
+        "zg-source"
+      ],
       "requiredAttributes": []
     },
     {
@@ -231,6 +322,7 @@
       "description": "Allows you to switch between normal row mode and condensed card mode for the grid.  \n`<zg-layout-controls>` is created internally and should not be placed directly in the user's HTML; however,\nthe user can style the `<zg-layout-controls>` using the `zg-layout-controls` selector.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -242,9 +334,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -258,9 +354,13 @@
         "zg-menu-group",
         "zg-menu-item",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -269,7 +369,12 @@
       "allowedChildren": [
         "zg-menu-item"
       ],
-      "requiredChildren": [],
+      "requiredChildren": [
+        "zg-menu-item"
+      ],
+      "requiredParent": [
+        "zg-menu"
+      ],
       "requiredAttributes": []
     },
     {
@@ -277,6 +382,10 @@
       "description": "This element defines a single menu item in ZingGrid's context \nmenu defined by `<zg-menu>`.  The element is typically dynamically generated, though \nit can be overwritten by a user's own custom `<zg-menu-item>` elements.  The \nelement can be styled via CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-menu",
+        "zg-menu-group"
+      ],
       "requiredAttributes": []
     },
     {
@@ -288,9 +397,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -298,6 +411,7 @@
       "description": "An option's list to go within a `<zg-select>` element",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -309,9 +423,13 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -319,22 +437,33 @@
       "description": "`<zg-param>` is a non-visual element used to pass the configuration options for the `<zg-data>` \nelement more cleanly via `name`-`value` pairs.  The element is not required, though it is preferred, as everything set \nwithin a `<zg-param>` element can also be set directly on `<zg-data>` via the `config` attribute.  Developers should note \nthat when setting complex values for the `value` attribute to use JSON encoded values.  Also, as a non-visual element, \nCSS styling does not apply to `<zg-param>`.",
       "allowedChildren": [],
       "requiredChildren": [],
-      "requiredAttributes": []
+      "requiredParent": [
+        "zg-data"
+      ],
+      "requiredAttributes": [
+        "name",
+        "value"
+      ]
     },
     {
       "name": "zg-row",
       "description": "`<zg-row>` is the container for the `<zg-cell>`, `<zg-head-cell>`, and `<zg-filter>` elements.\nIt corresponds to the `<tr>` tag on an HTML table.\nThe `<zg-row>` element is created dynamically and should not be placed in the grid by a developer.  \nHowever, the element is useful for styling the various rows of the grid using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
       "name": "zg-row-details",
       "description": "`<zg-row-details>` is the container for a row expansion;",
       "allowedChildren": [
-        "zing-grid"
+        "zing-grid",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -342,6 +471,7 @@
       "description": "The `<zg-search>` element is used to encapsulate the interface widget necessary for searching the grid -- \ntypically a text field and a button to trigger the search.  The element is added dynamically when search is specified and \nshould not be directly inserted by the developer.  The element and its contents can be styled using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -349,6 +479,18 @@
       "description": "A custom select dropdown defined by our library. The\ndropdown can be assigned different options through the `options` attribute.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-menu",
+        "zg-no-data",
+        "zg-pager",
+        "zg-source"
+      ],
       "requiredAttributes": []
     },
     {
@@ -356,6 +498,7 @@
       "description": "`<zg-selector-mask>` is used to wrap the cells during user selection for \nstyling purposes.  The element is dynamically added to the grid based upon the presence of the \n`selector` attribute on the `<zing-grid>` element.  The element should not be manually inserted, \nthough it can be styled using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -363,6 +506,7 @@
       "description": "`<zg-separator>` specifies the horizontal bar in the `<zg-menu>` used for separating \nitems.  The element is created dynamically and should not be manually inserted by developers.  However,\n`<zg-separator>` can be styled using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -374,9 +518,14 @@
         "zg-icon",
         "zg-input",
         "zg-select",
-        "zg-text"
+        "zg-text",
+        "*"
       ],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-footer",
+        "zing-grid"
+      ],
       "requiredAttributes": []
     },
     {
@@ -384,6 +533,7 @@
       "description": "`<zg-status>` is a custom element used to display messages to the \nuser, such as errors and verifications of CRUD actions.  `<zg-status>` is created \ndynamically and should not be inserted manually.  The `<zg-status>` element is \nstylable with CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -391,6 +541,7 @@
       "description": "The `<zg-table>` component replicates the `<table>` functionality in the grid.\nIt contains `<zg-head>`, `<zg-body>`, `<zg-foot>`, and `<zg-colgroup>`.  \nThe element and its contents are stylable directly using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -398,6 +549,17 @@
       "description": "`<zg-text>` is a ZingGrid specific text value that is bound to \nthe status of the grid, as defined by the `value` attribute.  The field can be \nmanually inserted by a developer, but is more commonly added by the use of certain \ngrid features, like paging.  The element is stylable with CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [
+        "zg-caption",
+        "zg-card",
+        "zg-column",
+        "zg-dialog",
+        "zg-footer",
+        "zg-load-mask",
+        "zg-menu",
+        "zg-no-data",
+        "zg-pager"
+      ],
       "requiredAttributes": []
     },
     {
@@ -405,6 +567,7 @@
       "description": "`<zg-tooltip>` elements are inserted dynamically by the ZingGrid library\nand serves as a container for the grid's tooltips.  As a generated element, developers\nshould not manually place `<zg-tooltip>` in their grid; however, they may style the tooltips and\nits internal elements using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -419,9 +582,11 @@
         "zg-footer",
         "zg-load-mask",
         "zg-menu",
-        "zg-pager"
+        "zg-pager",
+        "zg-source"
       ],
       "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     }
   ]

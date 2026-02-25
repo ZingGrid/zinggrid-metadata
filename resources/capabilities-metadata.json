@@ -82,22 +82,20 @@
       "requiredAttributes": {
         "oneOf": [
           [
-            [
-              "zing-grid:layout",
-              "zing-grid:layout-controls"
-            ],
-            [
-              "zing-grid:editor",
-              "zing-grid:editor-controls"
-            ]
+            "zing-grid:layout",
+            "zing-grid:layout-controls"
+          ],
+          [
+            "zing-grid:editor",
+            "zing-grid:editor-controls"
           ]
         ]
       },
       "disallowedAttributes": [
-        "editor"
+        "editor-template"
       ],
       "required": false,
-      "notes": "L"
+      "notes": "Layout must be set to \"card\" and editing needs to be enabled."
     },
     {
       "scope": "zg-card",
@@ -105,14 +103,12 @@
       "requiredAttributes": {
         "oneOf": [
           [
-            [
-              "zing-grid:layout",
-              "zing-grid:layout-controls"
-            ],
-            [
-              "zing-grid:editor",
-              "zing-grid:editor-controls"
-            ]
+            "zing-grid:layout",
+            "zing-grid:layout-controls"
+          ],
+          [
+            "zing-grid:editor",
+            "zing-grid:editor-controls"
           ]
         ]
       },
@@ -120,41 +116,37 @@
         "editor"
       ],
       "required": false,
-      "notes": "L"
+      "notes": "Layout must be set to \"card\" and editing needs to be enabled."
     },
     {
       "scope": "zg-card",
       "id": "renderer",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "zing-grid:layout",
-            "zing-grid:layout-controls"
-          ]
+          "zing-grid:layout",
+          "zing-grid:layout-controls"
         ]
       },
       "disallowedAttributes": [
         "renderer-template"
       ],
       "required": false,
-      "notes": "L"
+      "notes": "Layout must be set to \"card\""
     },
     {
       "scope": "zg-card",
       "id": "renderer-template",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "zing-grid:layout",
-            "zing-grid:layout-controls"
-          ]
+          "zing-grid:layout",
+          "zing-grid:layout-controls"
         ]
       },
       "disallowedAttributes": [
         "renderer"
       ],
       "required": false,
-      "notes": "L"
+      "notes": "Layout must be set to \"card\""
     }
   ],
   "zg-checkbox": [
@@ -205,7 +197,7 @@
       "id": "button-border",
       "requiredAttributes": {
         "allOf": [
-          "zg-column:type:button"
+          "type:button"
         ]
       },
       "disallowedAttributes": [],
@@ -233,11 +225,9 @@
       "id": "cell-tooltip-action",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -249,11 +239,9 @@
       "id": "cell-tooltip-delay",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -265,11 +253,9 @@
       "id": "cell-tooltip-icon",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -281,11 +267,9 @@
       "id": "cell-tooltip-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -330,11 +314,9 @@
       "id": "cell-tooltip-type",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -354,10 +336,8 @@
       "id": "content-width",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "type:iframe",
-            "type:image"
-          ]
+          "type:iframe",
+          "type:image"
         ]
       },
       "disallowedAttributes": [],
@@ -369,13 +349,11 @@
       "id": "default-display",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "zing-grid:data",
-            "zing-grid:src",
-            "zg-data:data",
-            "zg-data:src",
-            "zg-param:src"
-          ]
+          "zing-grid:data",
+          "zing-grid:src",
+          "zg-data:data",
+          "zg-data:src",
+          "zg-param:name:src"
         ]
       },
       "disallowedAttributes": [],
@@ -402,9 +380,7 @@
       "scope": "zg-column",
       "id": "drag",
       "requiredAttributes": {},
-      "disallowedAttributes": [
-        "zing-grid:header-row-hide"
-      ],
+      "disallowedAttributes": [],
       "required": false,
       "notes": ""
     },
@@ -421,11 +397,9 @@
       "id": "editor-template",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor",
-            "type:editor",
-            "zing-grid:editor-controls"
-          ]
+          "editor",
+          "zg-column:type:editor",
+          "zing-grid:editor-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -445,7 +419,8 @@
       "id": "filter-buttons",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -459,7 +434,8 @@
       "id": "filter-conditions",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -473,7 +449,8 @@
       "id": "filter-conditions-display",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -487,7 +464,8 @@
       "id": "filter-conditions-max",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -501,7 +479,8 @@
       "id": "filter-default-condition",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -515,10 +494,9 @@
       "id": "filter-index",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "index",
-            "filter"
-          ]
+          "index",
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [],
@@ -531,6 +509,7 @@
       "requiredAttributes": {
         "allOf": [
           "filter",
+          "zing-grid:filter",
           "zg-param:name:serverFilter"
         ]
       },
@@ -543,7 +522,8 @@
       "id": "filter-menu-areas",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -557,7 +537,8 @@
       "id": "filter-on",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -571,7 +552,8 @@
       "id": "filter-selectbox-display",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -585,7 +567,8 @@
       "id": "filter-trigger",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -599,7 +582,8 @@
       "id": "filterer",
       "requiredAttributes": {
         "oneOf": [
-          "filter"
+          "filter",
+          "zing-grid:filter"
         ]
       },
       "disallowedAttributes": [
@@ -639,11 +623,9 @@
       "id": "group-head-cell",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "group",
-            "type:row-group",
-            "zing-grid:group-by"
-          ]
+          "group",
+          "type:row-group",
+          "zing-grid:group-by"
         ]
       },
       "disallowedAttributes": [],
@@ -699,11 +681,9 @@
       "id": "header-tooltip-action",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -717,11 +697,9 @@
       "id": "header-tooltip-delay",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -735,11 +713,9 @@
       "id": "header-tooltip-icon",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -753,11 +729,9 @@
       "id": "header-tooltip-icon-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -771,11 +745,9 @@
       "id": "header-tooltip-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -820,11 +792,9 @@
       "id": "header-tooltip-trigger",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -838,11 +808,9 @@
       "id": "header-tooltip-type",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -926,11 +894,9 @@
       "id": "required",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor",
-            "type:editor",
-            "editor-controls"
-          ]
+          "editor",
+          "zg-column:type:editor",
+          "editor-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -1009,8 +975,9 @@
       "scope": "zg-column",
       "id": "sort-asc",
       "requiredAttributes": {
-        "allOf": [
-          "sort"
+        "oneOf": [
+          "sort",
+          "zing-grid:sort"
         ]
       },
       "disallowedAttributes": [],
@@ -1021,8 +988,9 @@
       "scope": "zg-column",
       "id": "sort-desc",
       "requiredAttributes": {
-        "allOf": [
-          "sort"
+        "oneOf": [
+          "sort",
+          "zing-grid:sort"
         ]
       },
       "disallowedAttributes": [],
@@ -1033,8 +1001,9 @@
       "scope": "zg-column",
       "id": "sort-intl",
       "requiredAttributes": {
-        "allOf": [
-          "sort"
+        "oneOf": [
+          "sort",
+          "zing-grid:sort"
         ]
       },
       "disallowedAttributes": [],
@@ -1047,6 +1016,10 @@
       "requiredAttributes": {
         "allOf": [
           "sort"
+        ],
+        "oneOf": [
+          "sort",
+          "zing-grid:sort"
         ]
       },
       "disallowedAttributes": [
@@ -1152,7 +1125,7 @@
       "id": "type-button-url",
       "requiredAttributes": {
         "allOf": [
-          "type:column"
+          "type:button"
         ]
       },
       "disallowedAttributes": [],
@@ -1179,11 +1152,9 @@
           "type:color"
         ],
         "oneOf": [
-          [
-            "editor",
-            "type:editor",
-            "zing-grid:editor-controls"
-          ]
+          "editor",
+          "zg-column:type:editor",
+          "zing-grid:editor-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -1195,7 +1166,6 @@
       "id": "type-color-preview",
       "requiredAttributes": {
         "allOf": [
-          "type:color",
           "type:color"
         ]
       },
@@ -1609,16 +1579,14 @@
       "id": "validation-error-message",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor",
-            "type:editor",
-            "zing-grid:editor-controls"
-          ]
+          "editor",
+          "zg-column:type:editor",
+          "zing-grid:editor-controls"
         ]
       },
       "disallowedAttributes": [],
       "required": false,
-      "notes": "E"
+      "notes": "Editing must be enabled to use this feature. \nBuilt-in validation is applied according to the column type, \nand a custom validator can be specified via `validator`."
     },
     {
       "scope": "zg-column",
@@ -1645,12 +1613,7 @@
     {
       "scope": "zg-column:type",
       "id": "aggregate",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1658,12 +1621,7 @@
     {
       "scope": "zg-column:type",
       "id": "boolean",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1671,12 +1629,7 @@
     {
       "scope": "zg-column:type",
       "id": "button",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1684,12 +1637,7 @@
     {
       "scope": "zg-column:type",
       "id": "checkbox",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1697,12 +1645,7 @@
     {
       "scope": "zg-column:type",
       "id": "color",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1710,12 +1653,7 @@
     {
       "scope": "zg-column:type",
       "id": "currency",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1723,12 +1661,7 @@
     {
       "scope": "zg-column:type",
       "id": "custom",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1736,12 +1669,7 @@
     {
       "scope": "zg-column:type",
       "id": "date",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1749,12 +1677,7 @@
     {
       "scope": "zg-column:type",
       "id": "duplicate",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1762,12 +1685,7 @@
     {
       "scope": "zg-column:type",
       "id": "editor",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1775,12 +1693,7 @@
     {
       "scope": "zg-column:type",
       "id": "element",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1788,12 +1701,7 @@
     {
       "scope": "zg-column:type",
       "id": "email",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1801,12 +1709,7 @@
     {
       "scope": "zg-column:type",
       "id": "emoji",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1814,12 +1717,7 @@
     {
       "scope": "zg-column:type",
       "id": "icon",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1827,12 +1725,7 @@
     {
       "scope": "zg-column:type",
       "id": "image",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1840,12 +1733,7 @@
     {
       "scope": "zg-column:type",
       "id": "iframe",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1853,12 +1741,7 @@
     {
       "scope": "zg-column:type",
       "id": "number",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1866,12 +1749,7 @@
     {
       "scope": "zg-column:type",
       "id": "password",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1879,12 +1757,7 @@
     {
       "scope": "zg-column:type",
       "id": "percentage",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1892,12 +1765,7 @@
     {
       "scope": "zg-column:type",
       "id": "radio",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1905,12 +1773,7 @@
     {
       "scope": "zg-column:type",
       "id": "range",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1918,12 +1781,7 @@
     {
       "scope": "zg-column:type",
       "id": "remover",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1931,12 +1789,7 @@
     {
       "scope": "zg-column:type",
       "id": "row-details",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1944,12 +1797,7 @@
     {
       "scope": "zg-column:type",
       "id": "row-group",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1957,12 +1805,7 @@
     {
       "scope": "zg-column:type",
       "id": "row-number",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1970,12 +1813,7 @@
     {
       "scope": "zg-column:type",
       "id": "select",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1983,12 +1821,7 @@
     {
       "scope": "zg-column:type",
       "id": "selector",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -1996,12 +1829,7 @@
     {
       "scope": "zg-column:type",
       "id": "tel",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2009,12 +1837,7 @@
     {
       "scope": "zg-column:type",
       "id": "text",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2022,12 +1845,7 @@
     {
       "scope": "zg-column:type",
       "id": "toggle",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2035,12 +1853,7 @@
     {
       "scope": "zg-column:type",
       "id": "url",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2176,10 +1989,8 @@
       "id": "replace",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "zing-grid:context-menu",
-            "zing-grid:static-menu"
-          ]
+          "zing-grid:context-menu",
+          "zing-grid:static-menu"
         ]
       },
       "disallowedAttributes": [],
@@ -2245,7 +2056,8 @@
       "id": "position",
       "requiredAttributes": {},
       "disallowedAttributes": [
-        "zing-grid:pager zing-grid:pager-position"
+        "zing-grid:pager",
+        "zing-grid:pager-position"
       ],
       "required": false,
       "notes": ""
@@ -2273,7 +2085,7 @@
         ]
       },
       "disallowedAttributes": [],
-      "required": false,
+      "required": true,
       "notes": ""
     },
     {
@@ -2285,7 +2097,7 @@
         ]
       },
       "disallowedAttributes": [],
-      "required": false,
+      "required": true,
       "notes": ""
     }
   ],
@@ -2293,12 +2105,7 @@
     {
       "scope": "zg-param:name",
       "id": "adapter",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2307,14 +2114,11 @@
       "scope": "zg-param:name",
       "id": "idKey",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2330,9 +2134,6 @@
           "createSrc",
           "zg-data:src",
           "zing-grid:src"
-        ],
-        "oneOf": [
-          []
         ]
       },
       "disallowedAttributes": [],
@@ -2343,16 +2144,13 @@
       "scope": "zg-param:name",
       "id": "recordPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:data",
-            "zg-data:src",
-            "zing-grid:data",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:data",
+          "zg-data:src",
+          "zing-grid:data",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2363,16 +2161,13 @@
       "scope": "zg-param:name",
       "id": "nodePath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:data",
-            "zg-data:src",
-            "zing-grid:data",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:data",
+          "zg-data:src",
+          "zing-grid:data",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2385,9 +2180,6 @@
       "requiredAttributes": {
         "allOf": [
           "zing-grid:search"
-        ],
-        "oneOf": [
-          []
         ]
       },
       "disallowedAttributes": [],
@@ -2402,12 +2194,10 @@
           "zing-grid:search"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2423,16 +2213,14 @@
         ],
         "oneOf": [
           [
-            [
-              "zg-column:filter",
-              "zing-grid:filter"
-            ],
-            [
-              "src",
-              "readSrc",
-              "zg-data:src",
-              "zing-grid:src"
-            ]
+            "zg-column:filter",
+            "zing-grid:filter"
+          ],
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
           ]
         ]
       },
@@ -2449,16 +2237,14 @@
         ],
         "oneOf": [
           [
-            [
-              "zg-column:filter",
-              "zing-grid:filter"
-            ],
-            [
-              "src",
-              "readSrc",
-              "zg-data:src",
-              "zing-grid:src"
-            ]
+            "zg-column:filter",
+            "zing-grid:filter"
+          ],
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
           ]
         ]
       },
@@ -2474,12 +2260,10 @@
           "zing-grid:sort"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2494,12 +2278,10 @@
           "zing-grid:sort"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2514,12 +2296,10 @@
           "zing-grid:sort"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2534,12 +2314,10 @@
           "zing-grid:sort"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2554,12 +2332,10 @@
           "zing-grid:batch-edit"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2570,20 +2346,17 @@
       "scope": "zg-param:name",
       "id": "startAtKey",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
           [
-            [
-              "nextPath",
-              "nextIDPath",
-              "prevPath",
-              "nextIDPath",
-              "pageKey"
-            ],
-            [
-              "loadByPage",
-              "loadByScroll"
-            ]
+            "nextPath",
+            "nextIDPath",
+            "prevPath",
+            "nextIDPath",
+            "pageKey"
+          ],
+          [
+            "loadByPage",
+            "loadByScroll"
           ]
         ]
       },
@@ -2594,12 +2367,7 @@
     {
       "scope": "zg-param:name",
       "id": "startAtValue",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2607,12 +2375,7 @@
     {
       "scope": "zg-param:name",
       "id": "limitToKey",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2620,12 +2383,7 @@
     {
       "scope": "zg-param:name",
       "id": "limitTo",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2633,12 +2391,7 @@
     {
       "scope": "zg-param:name",
       "id": "offsetKey",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2646,12 +2399,7 @@
     {
       "scope": "zg-param:name",
       "id": "offsetValue",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2659,12 +2407,7 @@
     {
       "scope": "zg-param:name",
       "id": "pageKey",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2673,14 +2416,11 @@
       "scope": "zg-param:name",
       "id": "countPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2693,9 +2433,6 @@
       "requiredAttributes": {
         "allOf": [
           "loadByPage"
-        ],
-        "oneOf": [
-          []
         ]
       },
       "disallowedAttributes": [],
@@ -2711,24 +2448,22 @@
         ],
         "oneOf": [
           [
-            [
-              "nextPath",
-              "nextIDPath",
-              "pageKey",
-              "prevPath",
-              "prevIDPath",
-              "startAtKey"
-            ],
-            [
-              "zg-pager",
-              "zing-grid:pager"
-            ],
-            [
-              "src",
-              "readSrc",
-              "zg-data:src",
-              "zing-grid:src"
-            ]
+            "nextPath",
+            "nextIDPath",
+            "pageKey",
+            "prevPath",
+            "prevIDPath",
+            "startAtKey"
+          ],
+          [
+            "zg-pager",
+            "zing-grid:pager"
+          ],
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
           ]
         ]
       },
@@ -2744,12 +2479,10 @@
           "zing-grid:height"
         ],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2760,14 +2493,11 @@
       "scope": "zg-param:name",
       "id": "hasNextPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2778,14 +2508,11 @@
       "scope": "zg-param:name",
       "id": "nextPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2796,14 +2523,11 @@
       "scope": "zg-param:name",
       "id": "nextIDPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2814,14 +2538,11 @@
       "scope": "zg-param:name",
       "id": "nextIDKey",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2832,14 +2553,11 @@
       "scope": "zg-param:name",
       "id": "hasPrevPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2850,14 +2568,11 @@
       "scope": "zg-param:name",
       "id": "prevPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2868,14 +2583,11 @@
       "scope": "zg-param:name",
       "id": "prevIDPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2886,14 +2598,11 @@
       "scope": "zg-param:name",
       "id": "prevIDKey",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -2903,12 +2612,7 @@
     {
       "scope": "zg-param:name",
       "id": "pageBase",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2923,20 +2627,18 @@
         ],
         "oneOf": [
           [
-            [
-              "zg-column:type:selector",
-              "zing-grid:row-selector"
-            ],
-            [
-              "zg-pager",
-              "zing-grid:pager"
-            ],
-            [
-              "src",
-              "readSrc",
-              "zg-data:src",
-              "zing-grid:src"
-            ]
+            "zg-column:type:selector",
+            "zing-grid:row-selector"
+          ],
+          [
+            "zg-pager",
+            "zing-grid:pager"
+          ],
+          [
+            "src",
+            "readSrc",
+            "zg-data:src",
+            "zing-grid:src"
           ]
         ]
       },
@@ -2947,12 +2649,7 @@
     {
       "scope": "zg-param:name",
       "id": "csvCaption",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2960,12 +2657,7 @@
     {
       "scope": "zg-param:name",
       "id": "csvDelimiter",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2973,12 +2665,7 @@
     {
       "scope": "zg-param:name",
       "id": "csvHeader",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2986,12 +2673,7 @@
     {
       "scope": "zg-param:name",
       "id": "csvLineSeparator",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -2999,12 +2681,7 @@
     {
       "scope": "zg-param:name",
       "id": "tableHide",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3012,12 +2689,7 @@
     {
       "scope": "zg-param:name",
       "id": "tableHead",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [
         "zing-grid:header-row-hide"
       ],
@@ -3027,12 +2699,7 @@
     {
       "scope": "zg-param:name",
       "id": "tableDataFormat",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3040,12 +2707,7 @@
     {
       "scope": "zg-param:name",
       "id": "tableHeadFormat",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [
         "zing-grid:header-row-hide"
       ],
@@ -3055,12 +2717,7 @@
     {
       "scope": "zg-param:name",
       "id": "collection",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3071,9 +2728,6 @@
       "requiredAttributes": {
         "allOf": [
           "collection"
-        ],
-        "oneOf": [
-          []
         ]
       },
       "disallowedAttributes": [],
@@ -3083,12 +2737,7 @@
     {
       "scope": "zg-param:name",
       "id": "dataTable",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3096,12 +2745,7 @@
     {
       "scope": "zg-param:name",
       "id": "createOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3109,12 +2753,7 @@
     {
       "scope": "zg-param:name",
       "id": "readOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3122,12 +2761,7 @@
     {
       "scope": "zg-param:name",
       "id": "updateRowOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3135,12 +2769,7 @@
     {
       "scope": "zg-param:name",
       "id": "updateCellOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3148,12 +2777,7 @@
     {
       "scope": "zg-param:name",
       "id": "updateOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3161,12 +2785,7 @@
     {
       "scope": "zg-param:name",
       "id": "deleteOptions",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3174,12 +2793,7 @@
     {
       "scope": "zg-param:name",
       "id": "src",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [
         "zing-grid:data",
         "zing-grid:src",
@@ -3192,12 +2806,7 @@
     {
       "scope": "zg-param:name",
       "id": "createSrc",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3205,12 +2814,7 @@
     {
       "scope": "zg-param:name",
       "id": "readSrc",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3218,12 +2822,7 @@
     {
       "scope": "zg-param:name",
       "id": "updateRowSrc",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3231,12 +2830,7 @@
     {
       "scope": "zg-param:name",
       "id": "updateCellSrc",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3244,12 +2838,7 @@
     {
       "scope": "zg-param:name",
       "id": "deleteSrc",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3258,14 +2847,11 @@
       "scope": "zg-param:name",
       "id": "restmode",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3276,14 +2862,11 @@
       "scope": "zg-param:name",
       "id": "method",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3294,14 +2877,11 @@
       "scope": "zg-param:name",
       "id": "createMethod",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3312,14 +2892,11 @@
       "scope": "zg-param:name",
       "id": "readMethod",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3330,14 +2907,11 @@
       "scope": "zg-param:name",
       "id": "updateRowMethod",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3348,14 +2922,11 @@
       "scope": "zg-param:name",
       "id": "updateCellMethod",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3366,14 +2937,11 @@
       "scope": "zg-param:name",
       "id": "deleteMethod",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3384,14 +2952,11 @@
       "scope": "zg-param:name",
       "id": "headers",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3402,14 +2967,11 @@
       "scope": "zg-param:name",
       "id": "queryString",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3420,14 +2982,11 @@
       "scope": "zg-param:name",
       "id": "body",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3438,14 +2997,11 @@
       "scope": "zg-param:name",
       "id": "bodyMethodSuffix",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3456,14 +3012,11 @@
       "scope": "zg-param:name",
       "id": "createBody",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3474,14 +3027,11 @@
       "scope": "zg-param:name",
       "id": "readBody",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3492,14 +3042,11 @@
       "scope": "zg-param:name",
       "id": "updateRowBody",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3510,14 +3057,11 @@
       "scope": "zg-param:name",
       "id": "updateCellBody",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3528,14 +3072,11 @@
       "scope": "zg-param:name",
       "id": "deleteBody",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3546,14 +3087,11 @@
       "scope": "zg-param:name",
       "id": "createCustomFunction",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3564,14 +3102,11 @@
       "scope": "zg-param:name",
       "id": "readCustomFunction",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3582,14 +3117,11 @@
       "scope": "zg-param:name",
       "id": "updateCellCustomFunction",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3600,14 +3132,11 @@
       "scope": "zg-param:name",
       "id": "updateRowCustomFunction",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3618,14 +3147,11 @@
       "scope": "zg-param:name",
       "id": "deleteCustomFunction",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3636,14 +3162,11 @@
       "scope": "zg-param:name",
       "id": "serverErrorMessage",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3654,14 +3177,11 @@
       "scope": "zg-param:name",
       "id": "serverErrorPath",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [],
@@ -3671,12 +3191,7 @@
     {
       "scope": "zg-param:name",
       "id": "exclude",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3684,12 +3199,7 @@
     {
       "scope": "zg-param:name",
       "id": "cdataEscape",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3697,12 +3207,7 @@
     {
       "scope": "zg-param:name",
       "id": "requestType",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3710,12 +3215,7 @@
     {
       "scope": "zg-param:name",
       "id": "responseType",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3723,12 +3223,7 @@
     {
       "scope": "zg-param:name",
       "id": "dataType",
-      "requiredAttributes": {
-        "allOf": [],
-        "oneOf": [
-          []
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3737,14 +3232,11 @@
       "scope": "zg-param:name",
       "id": "urlSuffix",
       "requiredAttributes": {
-        "allOf": [],
         "oneOf": [
-          [
-            "src",
-            "readSrc",
-            "zg-data:src",
-            "zing-grid:src"
-          ]
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
         ]
       },
       "disallowedAttributes": [
@@ -3756,9 +3248,7 @@
     {
       "scope": "zg-param:name",
       "id": "mode",
-      "requiredAttributes": {
-        "allOf": []
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3769,9 +3259,9 @@
       "scope": "zg-select",
       "id": "action",
       "requiredAttributes": {
-        "allOf": [
-          "value",
-          "options"
+        "oneOf": [
+          "options",
+          "zing-grid:page-size-options"
         ]
       },
       "disallowedAttributes": [],
@@ -3781,12 +3271,7 @@
     {
       "scope": "zg-select",
       "id": "options",
-      "requiredAttributes": {
-        "allOf": [
-          "action",
-          "value"
-        ]
-      },
+      "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3796,7 +3281,6 @@
       "id": "value",
       "requiredAttributes": {
         "allOf": [
-          "action",
           "options"
         ]
       },
@@ -3926,7 +3410,9 @@
       "scope": "zing-grid",
       "id": "caption",
       "requiredAttributes": {},
-      "disallowedAttributes": [],
+      "disallowedAttributes": [
+        "zg-caption"
+      ],
       "required": false,
       "notes": ""
     },
@@ -3935,10 +3421,8 @@
       "id": "card",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "layout",
-            "layout-controls"
-          ]
+          "layout",
+          "layout-controls"
         ]
       },
       "disallowedAttributes": [
@@ -3948,7 +3432,7 @@
         "zg-card:editor-template"
       ],
       "required": false,
-      "notes": "L"
+      "notes": "Layout must be in card mode to view changes"
     },
     {
       "scope": "zing-grid",
@@ -3987,11 +3471,9 @@
       "id": "cell-tooltip-action",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "zg-column:cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "zg-column:cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -4003,11 +3485,9 @@
       "id": "cell-tooltip-delay",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "zg-column:cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "zg-column:cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -4019,11 +3499,9 @@
       "id": "cell-tooltip-icon",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "zg-column:cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "zg-column:cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -4035,11 +3513,9 @@
       "id": "cell-tooltip-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "zg-column:cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "zg-column:cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -4071,11 +3547,9 @@
       "id": "cell-tooltip-type",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "cell-tooltip-renderer",
-            "cell-tooltip-template",
-            "zg-column:cell-tooltip-text"
-          ]
+          "cell-tooltip-renderer",
+          "cell-tooltip-template",
+          "zg-column:cell-tooltip-text"
         ]
       },
       "disallowedAttributes": [],
@@ -4207,10 +3681,8 @@
       "id": "confirm-delete",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor-controls",
-            "zg-column:type:remover"
-          ]
+          "editor-controls",
+          "zg-column:type:remover"
         ]
       },
       "disallowedAttributes": [],
@@ -4225,10 +3697,8 @@
           "batch-edit"
         ],
         "oneOf": [
-          [
-            "editor-controls",
-            "zg-column:remover"
-          ]
+          "editor-controls",
+          "zg-column:remover"
         ]
       },
       "disallowedAttributes": [],
@@ -4248,10 +3718,8 @@
       "id": "creator",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor-controls",
-            "zg-column:type:creator"
-          ]
+          "editor-controls",
+          "zg-column:type:creator"
         ]
       },
       "disallowedAttributes": [],
@@ -4276,13 +3744,11 @@
       "id": "default-display",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "data",
-            "src",
-            "zg-data:data",
-            "zg-data:src",
-            "zg-param:src"
-          ]
+          "data",
+          "src",
+          "zg-data:data",
+          "zg-data:src",
+          "zg-param:name:src"
         ]
       },
       "disallowedAttributes": [],
@@ -4294,12 +3760,10 @@
       "id": "dialog",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "batch-edit",
-            "editor:modal",
-            "editor-controls",
-            "zg-column:type:remover"
-          ]
+          "batch-edit",
+          "editor:modal",
+          "editor-controls",
+          "zg-column:type:remover"
         ]
       },
       "disallowedAttributes": [],
@@ -4335,11 +3799,9 @@
       "id": "editor-disabled-fields",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "batch-edit",
-            "editor",
-            "editor-controls"
-          ]
+          "batch-edit",
+          "editor",
+          "editor-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -4487,16 +3949,8 @@
       "id": "foot-class",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "aggregate",
-            "frozen-rows-bottom",
-            "zg-column:foot-cell",
-            "zg-column:type:aggregate"
-          ],
-          [
-            "frozen-rows-bottom",
-            "zg-column:foot-cell"
-          ]
+          "frozen-rows-bottom",
+          "zg-column:foot-cell"
         ]
       },
       "disallowedAttributes": [],
@@ -4524,10 +3978,8 @@
       "id": "frozen-row-class",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "frozen-rows-bottom",
-            "frozen-rows-top"
-          ]
+          "frozen-rows-bottom",
+          "frozen-rows-top"
         ]
       },
       "disallowedAttributes": [],
@@ -4573,18 +4025,16 @@
       "id": "head-class",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "frozen-rows-top",
-            "zg-column:group-head-cell",
-            "zg-column:head-cell"
-          ]
+          "frozen-rows-top",
+          "zg-column:group-head-cell",
+          "zg-column:head-cell"
         ]
       },
       "disallowedAttributes": [
         "header-row-hide"
       ],
       "required": false,
-      "notes": "H"
+      "notes": "Headers are there by default, so features that adds headers are not required."
     },
     {
       "scope": "zing-grid",
@@ -4606,8 +4056,7 @@
         "head-class",
         "header-tooltip-renderer",
         "header-tooltip-template",
-        "sort",
-        ""
+        "sort"
       ],
       "required": false,
       "notes": ""
@@ -4617,11 +4066,9 @@
       "id": "header-tooltip-action",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4635,11 +4082,9 @@
       "id": "header-tooltip-delay",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4653,11 +4098,9 @@
       "id": "header-tooltip-icon",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4671,11 +4114,9 @@
       "id": "header-tooltip-icon-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4689,11 +4130,9 @@
       "id": "header-tooltip-position",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4729,11 +4168,9 @@
       "id": "header-tooltip-trigger",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4747,11 +4184,9 @@
       "id": "header-tooltip-type",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "header-tooltip-renderer",
-            "header-tooltip-template",
-            "zg-column:header-tooltip-text"
-          ]
+          "header-tooltip-renderer",
+          "header-tooltip-template",
+          "zg-column:header-tooltip-text"
         ]
       },
       "disallowedAttributes": [
@@ -4805,13 +4240,11 @@
       "id": "loading",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "data",
-            "src",
-            "zg-data:data",
-            "zg-data:src",
-            "zg-param:src"
-          ]
+          "data",
+          "src",
+          "zg-data:data",
+          "zg-data:src",
+          "zg-param:name:src"
         ]
       },
       "disallowedAttributes": [],
@@ -4831,11 +4264,9 @@
       "id": "loadmask",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "src",
-            "zg-data:src",
-            "zg-param:src"
-          ]
+          "src",
+          "zg-data:src",
+          "zg-param:name:src"
         ]
       },
       "disallowedAttributes": [],
@@ -4854,7 +4285,9 @@
       "scope": "zing-grid",
       "id": "no-data",
       "requiredAttributes": {},
-      "disallowedAttributes": [],
+      "disallowedAttributes": [
+        "zg-no-data"
+      ],
       "required": false,
       "notes": ""
     },
@@ -4862,8 +4295,9 @@
       "scope": "zing-grid",
       "id": "page-size",
       "requiredAttributes": {
-        "allOf": [
-          "pager"
+        "oneOf": [
+          "pager",
+          "zg-pager"
         ]
       },
       "disallowedAttributes": [
@@ -4876,8 +4310,9 @@
       "scope": "zing-grid",
       "id": "page-size-card",
       "requiredAttributes": {
-        "allOf": [
-          "pager"
+        "oneOf": [
+          "pager",
+          "zg-pager"
         ]
       },
       "disallowedAttributes": [
@@ -4890,8 +4325,9 @@
       "scope": "zing-grid",
       "id": "page-size-options",
       "requiredAttributes": {
-        "allOf": [
-          "pager"
+        "oneOf": [
+          "pager",
+          "zg-pager"
         ]
       },
       "disallowedAttributes": [
@@ -4905,8 +4341,9 @@
       "scope": "zing-grid",
       "id": "page-size-row",
       "requiredAttributes": {
-        "allOf": [
-          "pager"
+        "oneOf": [
+          "pager",
+          "zg-pager"
         ]
       },
       "disallowedAttributes": [
@@ -4919,7 +4356,9 @@
       "scope": "zing-grid",
       "id": "pager",
       "requiredAttributes": {},
-      "disallowedAttributes": [],
+      "disallowedAttributes": [
+        "zg-pager"
+      ],
       "required": false,
       "notes": ""
     },
@@ -5039,13 +4478,11 @@
       "id": "record-key",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "data",
-            "src",
-            "zg-data:data",
-            "zg-data:src",
-            "zg-param:name:src"
-          ]
+          "data",
+          "src",
+          "zg-data:data",
+          "zg-data:src",
+          "zg-param:name:src"
         ]
       },
       "disallowedAttributes": [],
@@ -5172,7 +4609,9 @@
       "scope": "zing-grid",
       "id": "source",
       "requiredAttributes": {},
-      "disallowedAttributes": [],
+      "disallowedAttributes": [
+        "zg-source"
+      ],
       "required": false,
       "notes": ""
     },
@@ -5250,10 +4689,8 @@
       "id": "type-selector-page-persist",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "row-selector",
-            "zg-column:type:selector"
-          ]
+          "row-selector",
+          "zg-column:type:selector"
         ]
       },
       "disallowedAttributes": [],
@@ -5265,15 +4702,13 @@
       "id": "validation-error-message",
       "requiredAttributes": {
         "oneOf": [
-          [
-            "editor",
-            "editor-controls"
-          ]
+          "editor",
+          "editor-controls"
         ]
       },
       "disallowedAttributes": [],
       "required": false,
-      "notes": "E"
+      "notes": "Editing must be enabled to use this feature. \nBuilt-in validation is applied according to the column type, \nand a custom validator can be specified via `validator`."
     },
     {
       "scope": "zing-grid",
@@ -5283,10 +4718,8 @@
           "zg-column:required"
         ],
         "oneOf": [
-          [
-            "editor",
-            "editor-controls"
-          ]
+          "editor",
+          "editor-controls"
         ]
       },
       "disallowedAttributes": [],
