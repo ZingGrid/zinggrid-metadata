@@ -1,6 +1,6 @@
 {
   "name": "zinggrid-metadata",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "zinggridVersion": "2.1.5",
   "description": "Capabilities metadata and features registry for ZingGrid.",
   "keywords": [
@@ -14,12 +14,12 @@
     "web-components"
   ],
   "exports": {
-    ".": "./index.mjs"
+    ".": "./index.mjs",
+    "./resources/*": "./resources/*"
   },
   "files": [
-    "capabilities-metadata.json",
-    "content-model-schema.json",
-    "features-registry.json"
+    "index.mjs",
+    "resources/"
   ],
   "repository": {
     "type": "git",
