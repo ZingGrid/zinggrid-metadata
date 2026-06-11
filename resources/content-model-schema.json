@@ -212,6 +212,14 @@
       "requiredAttributes": []
     },
     {
+      "name": "zg-filter-summary",
+      "description": "`<zg-filter-summary>` is the container for a single cell in a filter summary row that may contain a filter summary chart.\n`<zg-filter-summary>` is created internally and should not be placed directly in the user's HTML; however,\nthe user can style the `<zg-filter-summary>` using the `zg-filter-summary` selector.",
+      "allowedChildren": [],
+      "requiredChildren": [],
+      "requiredParent": [],
+      "requiredAttributes": []
+    },
+    {
       "name": "zg-focus",
       "description": "The `<zg-focus>` element is a generated element added to `<zing-grid>`\nwhen the `selector` attribute is defined.  It is used as a container for the focus of cell(s) \nand used as a CSS target for styling by the developer.  It should not be accessed specifically\nbeyond styling.",
       "allowedChildren": [],

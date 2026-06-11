@@ -56,6 +56,9 @@
           "selectrow": "Selects a single row",
           "sortcolumn": "Sorts the selected column",
           "submitrecord": "Submits the record to be created or edited",
+          "clearfilter": "Clears filter for column",
+          "closefilterrow": "Closes filter summary row",
+          "openfilterrow": "Opens filter summary row",
           "about": "Opens about details about the ZingGrid library"
         },
         "defaultValue": "\"\"",
@@ -986,12 +989,14 @@
       {
         "id": "filter",
         "scope": "zg-column",
-        "description": "Overrides the grid level `filter` attribute.  Presence of attribute enables the menu on `filter` column.  Can be set to `inline`, `menu`, `both`, or `disabled`",
+        "description": "Overrides the grid level `filter` attribute.  Presence of attribute enables the menu on `filter` column.  Can be set to `inline`, `menu`, `summary`, `both`, `all`, a comma-separated combination (e.g. `\"inline,summary\"`), or `disabled`",
         "type": "String | Boolean",
         "enumValues": {
           "menu": "Enables filter menu that allows for complex filtering options",
           "inline": "Enables simple inline filtering",
           "both": "Enables both the inline and menu filtering",
+          "summary": "Enables filtering on summary chart",
+          "all": "Enables inline, menu, and summary filtering",
           "disabled": "Disables filter"
         },
         "defaultValue": "\"menu\"",
@@ -1349,6 +1354,87 @@
         "cascades": {
           "from": [
             "zing-grid:filter-selectbox-display"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-chart",
+        "scope": "zg-column",
+        "description": "Sets the filter summary chart type",
+        "type": "String",
+        "enumValues": {
+          "bar": "Distribution bar chart",
+          "default": "Default chart type for column type",
+          "histogram": "Histogram chart",
+          "pie": "Pie chart"
+        },
+        "defaultValue": "\"default\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:filter-summary-chart"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-multi-node",
+        "scope": "zg-column",
+        "description": "Controls whether multiple nodes can be selected simultaneously for bar and pie summary charts.",
+        "type": "String",
+        "enumValues": {
+          "disabled": "Only one node can be active at a time (single-select)"
+        },
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:filter-summary-multi-node"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-node-sort",
+        "scope": "zg-column",
+        "description": "Sets the node sort order for filter summary chart",
+        "type": "String",
+        "enumValues": {
+          "alphabetical": "Nodes are sorted alphabetically by their labels",
+          "'count": "desc' - Nodes are sorted by count in ascending order (smallest → largest)",
+          "value": "Nodes are sorted by the numeric value represented by their labels",
+          "none": "Nodes retain their original order"
+        },
+        "defaultValue": "\"default\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:filter-summary-node-sort"
           ]
         },
         "deprecated": false,
@@ -4282,6 +4368,9 @@
           "reload": "\"reload\"",
           "remove": "\"remove\"",
           "removerecord": "\"removerecord\"",
+          "clearfilter": "\"clearfilter\"",
+          "closefilterrow": "\"closefilterrow\"",
+          "openfilterrow": "\"openfilterrow\"",
           "search": "\"search\"",
           "sort": "\"sort\"",
           "submitrecord": "\"submitrecord\"",
@@ -8192,12 +8281,14 @@
       {
         "id": "filter",
         "scope": "zing-grid",
-        "description": "Enables filtering for all columns.  Can be turned on/off individually via column.  Can be set to \"inline\" or \"menu\"  Default is \"menu\"",
+        "description": "Enables filtering for all columns.  Can be turned on/off individually via column.  Can be set to \"inline\", \"menu\", \"summary\", \"both\", \"all\", a comma-separated combination (e.g. \"inline,summary\"), or \"disabled\".  Default is \"menu\"",
         "type": "String | Boolean",
         "enumValues": {
           "menu": "Enables filter menu that allows for complex filtering options",
           "inline": "Enables simple inline filtering",
           "both": "Enables both the inline and menu filtering",
+          "summary": "Enables filtering on summary chart",
+          "all": "Enables inline, menu, and summary filtering",
           "disabled": "Disables filter"
         },
         "defaultValue": "\"menu\"",
@@ -8511,6 +8602,87 @@
         "cascades": {
           "to": [
             "zg-column:filter-selectbox-display"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-chart",
+        "scope": "zing-grid",
+        "description": "Sets the filter summary chart type",
+        "type": "String",
+        "enumValues": {
+          "bar": "Distribution bar chart",
+          "default": "Default chart type for column type",
+          "histogram": "Histogram chart",
+          "pie": "Pie chart"
+        },
+        "defaultValue": "\"default\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:filter-summary-chart"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-multi-node",
+        "scope": "zing-grid",
+        "description": "Controls whether multiple nodes can be selected simultaneously for bar and pie summary charts.",
+        "type": "String",
+        "enumValues": {
+          "disabled": "Only one node can be active at a time (single-select)"
+        },
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:filter-summary-multi-node"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-node-sort",
+        "scope": "zing-grid",
+        "description": "Sets the node sort order for filter summary chart",
+        "type": "String",
+        "enumValues": {
+          "alphabetical": "Nodes are sorted alphabetically by their labels",
+          "'count": "desc' - Nodes are sorted by count in ascending order (smallest → largest)",
+          "value": "Nodes are sorted by the numeric value represented by their labels",
+          "none": "Nodes retain their original order"
+        },
+        "defaultValue": "\"default\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:filter-summary-node-sort"
           ]
         },
         "deprecated": false,

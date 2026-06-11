@@ -564,6 +564,51 @@
     },
     {
       "scope": "zg-column",
+      "id": "filter-summary-chart",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-summary-multi-node",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-summary-node-sort",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
       "id": "filter-trigger",
       "requiredAttributes": {
         "oneOf": [
@@ -3926,6 +3971,51 @@
       },
       "disallowedAttributes": [
         "header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-chart",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-multi-node",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-node-sort",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
       ],
       "required": false,
       "notes": ""
