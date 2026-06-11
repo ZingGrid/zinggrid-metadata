@@ -1,7 +1,7 @@
 {
   "name": "zinggrid-metadata",
-  "version": "1.0.4",
-  "zinggridVersion": "2.1.5",
+  "version": "1.0.5",
+  "zinggridVersion": "2.2.0",
   "description": "Capabilities metadata and features registry for ZingGrid.",
   "keywords": [
     "zinggrid",
