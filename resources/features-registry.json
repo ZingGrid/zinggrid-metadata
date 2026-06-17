@@ -8637,6 +8637,28 @@
         "notes": ""
       },
       {
+        "id": "filter-summary-mode",
+        "scope": "zing-grid",
+        "description": "Controls whether applying a filter summary in one column clears the active filter summary in other columns.",
+        "type": "String",
+        "enumValues": {
+          "cumulative": "Each column independently maintains its own active filter summary state (filters are ANDed across columns).",
+          "exclusive": "Only one column can have an active filter summary at a time; activating a node in one column clears the previous column's filter summary."
+        },
+        "defaultValue": "\"cumulative\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
         "id": "filter-summary-multi-node",
         "scope": "zing-grid",
         "description": "Controls whether multiple nodes can be selected simultaneously for bar and pie summary charts.",
@@ -8685,6 +8707,25 @@
             "zg-column:filter-summary-node-sort"
           ]
         },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-row-collapsed",
+        "scope": "zing-grid",
+        "description": "Controls whether the filter summary row starts collapsed.",
+        "type": "Boolean",
+        "enumValues": {},
+        "defaultValue": "false",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
         "deprecated": false,
         "severity": "info",
         "notes": ""

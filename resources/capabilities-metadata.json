@@ -3992,6 +3992,21 @@
     },
     {
       "scope": "zing-grid",
+      "id": "filter-summary-mode",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
       "id": "filter-summary-multi-node",
       "requiredAttributes": {
         "oneOf": [
@@ -4017,6 +4032,19 @@
       "disallowedAttributes": [
         "zing-grid:header-row-hide"
       ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-row-collapsed",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [],
       "required": false,
       "notes": ""
     },
