@@ -206,6 +206,14 @@
     },
     {
       "scope": "zg-column",
+      "id": "card-density-breakpoint",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
       "id": "cell-break",
       "requiredAttributes": {},
       "disallowedAttributes": [],
@@ -379,6 +387,14 @@
     {
       "scope": "zg-column",
       "id": "drag",
+      "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "drag-persistent",
       "requiredAttributes": {},
       "disallowedAttributes": [],
       "required": false,
@@ -579,6 +595,21 @@
     },
     {
       "scope": "zg-column",
+      "id": "filter-summary-lens",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zing-grid:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
       "id": "filter-summary-multi-node",
       "requiredAttributes": {
         "oneOf": [
@@ -604,6 +635,25 @@
       "disallowedAttributes": [
         "zing-grid:header-row-hide"
       ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "filter-summary-ring-thickness",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "filter:summary",
+            "zing-grid:filter:summary"
+          ],
+          [
+            "filter-summar-chart:ring",
+            "zing-grid:filter-summary-chart:ring"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
       "required": false,
       "notes": ""
     },
@@ -1474,6 +1524,24 @@
     },
     {
       "scope": "zg-column",
+      "id": "type-row-details-card-mode",
+      "requiredAttributes": {
+        "allOf": [
+          "type:row-details"
+        ],
+        "oneOf": [
+          "type-row-details-renderer",
+          "type-row-details-template",
+          "zing-grid:row-details-renderer",
+          "zing-grid:row-details-template"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
       "id": "type-row-details-renderer",
       "requiredAttributes": {
         "allOf": [
@@ -1639,6 +1707,20 @@
       "requiredAttributes": {
         "allOf": [
           "required"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-column",
+      "id": "validator",
+      "requiredAttributes": {
+        "oneOf": [
+          "editor",
+          "zg-column:type:editor",
+          "zing-grid:editor-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -3293,7 +3375,30 @@
     {
       "scope": "zg-param:name",
       "id": "mode",
-      "requiredAttributes": {},
+      "requiredAttributes": {
+        "oneOf": [
+          "src",
+          "readSrc",
+          "zg-data:src",
+          "zing-grid:src"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zg-param:name",
+      "id": "resetOnDataChange",
+      "requiredAttributes": {
+        "oneOf": [
+          "zing-grid:columns-control",
+          "zing-grid:filter",
+          "zing-grid:pager",
+          "zing-grid:search",
+          "zing-grid:sort"
+        ]
+      },
       "disallowedAttributes": [],
       "required": false,
       "notes": ""
@@ -3481,6 +3586,83 @@
     },
     {
       "scope": "zing-grid",
+      "id": "card-resizable",
+      "requiredAttributes": {
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "card-resizable-fixed",
+      "requiredAttributes": {
+        "allOf": [
+          "card-resizable"
+        ],
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "card-resizable-responsive",
+      "requiredAttributes": {
+        "allOf": [
+          "card-resizable"
+        ],
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "card-resizable-responsive-max",
+      "requiredAttributes": {
+        "allOf": [
+          "card-resizable"
+        ],
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "card-resizable-responsive-min",
+      "requiredAttributes": {
+        "allOf": [
+          "card-resizable"
+        ],
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
       "id": "cell-break",
       "requiredAttributes": {},
       "disallowedAttributes": [],
@@ -3630,6 +3812,18 @@
       "disallowedAttributes": [
         "header-row-hide"
       ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "column-drag-persistent",
+      "requiredAttributes": {
+        "allOf": [
+          "column-drag"
+        ]
+      },
+      "disallowedAttributes": [],
       "required": false,
       "notes": ""
     },
@@ -3981,7 +4175,37 @@
       "requiredAttributes": {
         "oneOf": [
           "filter:summary",
-          "zing-grid:filter:summary"
+          "zg-column:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-lens",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zg-column:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [
+        "zing-grid:header-row-hide"
+      ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-mode",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zg-column:filter:summary"
         ]
       },
       "disallowedAttributes": [
@@ -3996,7 +4220,7 @@
       "requiredAttributes": {
         "oneOf": [
           "filter:summary",
-          "zing-grid:filter:summary"
+          "zg-column:filter:summary"
         ]
       },
       "disallowedAttributes": [
@@ -4011,12 +4235,44 @@
       "requiredAttributes": {
         "oneOf": [
           "filter:summary",
-          "zing-grid:filter:summary"
+          "zg-column:filter:summary"
         ]
       },
       "disallowedAttributes": [
         "zing-grid:header-row-hide"
       ],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-ring-thickness",
+      "requiredAttributes": {
+        "oneOf": [
+          [
+            "filter:summary",
+            "zg-column:filter:summary"
+          ],
+          [
+            "filter-summary-chart:ring",
+            "zg-column:filter-summary-chart:ring"
+          ]
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "filter-summary-row-collapsed",
+      "requiredAttributes": {
+        "oneOf": [
+          "filter:summary",
+          "zg-column:filter:summary"
+        ]
+      },
+      "disallowedAttributes": [],
       "required": false,
       "notes": ""
     },
@@ -4041,6 +4297,32 @@
         "oneOf": [
           "frozen-rows-bottom",
           "zg-column:foot-cell"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-cards-bottom",
+      "requiredAttributes": {
+        "oneOf": [
+          "layout",
+          "layout-controls"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "frozen-cards-top",
+      "requiredAttributes": {
+        "oneOf": [
+          "layout",
+          "layout-controls"
         ]
       },
       "disallowedAttributes": [],
@@ -4583,6 +4865,35 @@
       "scope": "zing-grid",
       "id": "row-class",
       "requiredAttributes": {},
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-details-card-mode",
+      "requiredAttributes": {
+        "oneOf": [
+          "row-details-renderer",
+          "row-details-template"
+        ]
+      },
+      "disallowedAttributes": [],
+      "required": false,
+      "notes": ""
+    },
+    {
+      "scope": "zing-grid",
+      "id": "row-details-card-sidebar-boundary",
+      "requiredAttributes": {
+        "allOf": [
+          "row-details-card-mode:sidebar"
+        ],
+        "oneOf": [
+          "row-details-renderer",
+          "row-details-template"
+        ]
+      },
       "disallowedAttributes": [],
       "required": false,
       "notes": ""

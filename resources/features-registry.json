@@ -10,9 +10,14 @@
           "batchedit": "Enables batch edit mode",
           "batcheditcancel": "Cancels batch edit changes and mode",
           "batcheditsave": "Saves batch edit changes and closes mode",
+          "calendarselection": "Opens the calendar selection view for a column's date-based filter summary",
           "cancel": "Cancels the record to be created or edited",
           "cancelrecord": "Cancels record edit changes",
+          "cardresize": "Opens the control bar's card resize menu",
           "checkbox": "Checkbox to check and uncheck",
+          "clearfilter": "Clears filter for column",
+          "clearfiltersummary": "Clears the applied summary filter for every column",
+          "closefilterrow": "Closes filter summary row",
           "closerowdetails": "Hides details section of the row",
           "closerowgroup": "Hides the descendent rows of the row",
           "copycell": "Adds the formatted content of the selected cell to clipboard",
@@ -25,6 +30,9 @@
           "editrecord": "Enables edit mode on a record",
           "editrow": "Enables edit mode on a row",
           "filter": "Opens menu on a column to perform filter in grid column",
+          "filtermenu": "Opens the control bar's filter menu",
+          "filtersummarycardmenu": "Opens the control bar's filter summary menu (card mode)",
+          "filtersummarymenu": "Opens the filter summary action menu for a column",
           "firstpage": "Navigate to the first page",
           "fixedmenu": "Opens grid static/context menu",
           "freezecolumnleft": "Freezes selected column and place into left (frozen) panel",
@@ -34,13 +42,19 @@
           "freezerowbottom": "Freezes selected row and place on bottom (frozen) panel",
           "hidecolumn": "Hides selected column",
           "unfreezerow": "Unfreezes selected row and place on middle (unfrozen) panel",
+          "freezecardtop": "Freezes selected card and place on top (frozen) panel",
+          "freezecardbottom": "Freezes selected card and place on bottom (frozen) panel",
+          "unfreezecard": "Unfreezes selected card and place back in the middle (unfrozen) panel",
           "getselection": "Add the raw values of selected cells to the clipboard",
           "insertrecord": "Creates a new row at specified position",
           "layoutrow": "Displays content as rows",
           "layoutcard": "Displays content as cards",
           "lastpage": "Navigates to the last page",
+          "lens": "Enables lens mode for filter summary chart",
+          "closelens": "Closes lens mode for filter summary chart",
           "menu": "Opens menu to hide or show columns",
           "nextpage": "Navigates to the next page",
+          "openfilterrow": "Opens filter summary row",
           "openrowdetails": "Displaying details section of the row",
           "openrowgroup": "Displays the descdendent rows of the row",
           "page": "Navigates to page specified by `page-index`",
@@ -55,10 +69,8 @@
           "selectcell": "Selects a single cell",
           "selectrow": "Selects a single row",
           "sortcolumn": "Sorts the selected column",
+          "sortmenu": "Opens the control bar's sort menu",
           "submitrecord": "Submits the record to be created or edited",
-          "clearfilter": "Clears filter for column",
-          "closefilterrow": "Closes filter summary row",
-          "openfilterrow": "Opens filter summary row",
           "about": "Opens about details about the ZingGrid library"
         },
         "defaultValue": "\"\"",
@@ -174,11 +186,15 @@
           "batchedit": "\"batchedit\"",
           "batcheditcancel": "\"batcheditcancel\"",
           "batcheditsave": "\"batcheditsave\"",
+          "calendarselection": "\"calendarselection\"",
           "cancel": "\"cancel\"",
           "cancelrecord": "\"cancelrecord\"",
+          "cardresize": "\"cardresize\"",
           "checked": "\"checked\"",
           "checkmark": "\"checkmark\"",
+          "clearfilter": "\"clearfilter\"",
           "close": "\"close\"",
+          "closefilterrow": "\"closefilterrow\"",
           "createrecord": "\"createrecord\"",
           "down": "\"down\"",
           "duplicaterecord": "\"duplicaterecord\"",
@@ -189,13 +205,18 @@
           "firstpage": "\"firstpage\"",
           "fixedmenu": "\"fixedmenu\"",
           "filter": "\"filter\"",
+          "filtersummarycardmenu": "\"filtersummarycardmenu\"",
+          "filtersummarymenu": "\"filtersummarymenu\"",
           "info": "\"info\"",
           "lastpage": "\"lastpage\"",
           "layoutcard": "\"layoutcard\"",
           "layoutrow": "\"layoutrow\"",
+          "lens": "\"lens\"",
+          "closelens": "\"closelens\"",
           "link": "\"link\"",
           "menu": "\"menu\"",
           "nextpage": "\"nextpage\"",
+          "openfilterrow": "\"openfilterrow\"",
           "outsidearrow": "\"outsidearrow\"",
           "prevpage": "\"prevpage\"",
           "reload": "\"reload\"",
@@ -203,6 +224,7 @@
           "removerecord": "\"removerecord\"",
           "search": "\"search\"",
           "sort": "\"sort\"",
+          "sortmenu": "\"sortmenu\"",
           "submitrecord": "\"submitrecord\"",
           "success": "\"success\"",
           "unchecked": "\"unchecked\"",
@@ -450,6 +472,33 @@
         "alternativeAttributes": [],
         "relatedAttributes": [],
         "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "card-density-breakpoint",
+        "scope": "zg-column",
+        "description": "Sets the minimum `[viewport]` tier at which this card field is visible; it hides below that\ntier and shows at it and every larger one. Fields without a `card-density-breakpoint` are always visible.\nFields sharing the same value show/hide together. If `zing-grid:viewportTypes` is set, its custom breakpoint\nlabels replace the 5 built-in ones entirely, and the shorthand rank numbers follow their order from smallest\nto largest instead.",
+        "type": "Number | String",
+        "enumValues": {
+          "mobile": "Visible starting at the `mobile` viewport tier (rank 1)",
+          "tablet": "landscape - Visible starting at the `tablet-landscape` viewport tier (rank 3)",
+          "desktop": "large - Visible starting at the `desktop-large` viewport tier (rank 5)"
+        },
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "zing-grid:layout:card",
+          "zing-grid:viewport",
+          "zing-grid:viewport-types"
+        ],
+        "analogousAttributes": [
+          "visibility-priority"
+        ],
         "cascades": {},
         "deprecated": false,
         "severity": "info",
@@ -927,12 +976,40 @@
         "eabledBy": [],
         "alternativeAttributes": [],
         "relatedAttributes": [
-          "zing-grid:column-drag-action"
+          "zing-grid:column-drag-action",
+          "drag-persistent"
         ],
         "analogousAttributes": [],
         "cascades": {
           "from": [
             "zing-grid:column-drag"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "drag-persistent",
+        "scope": "zg-column",
+        "description": "Presence of attribute displays the column drag icon without hover.  Set to `disabled` to override setting on `<zing-grid>`.",
+        "type": "Boolean | String",
+        "enumValues": {
+          "disabled": "Disables persistent display of the column drag icon"
+        },
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "drag",
+          "zing-grid:column-drag",
+          "zing-grid:column-drag-persistent"
+        ],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:column-drag-persistent"
           ]
         },
         "deprecated": false,
@@ -1363,13 +1440,15 @@
       {
         "id": "filter-summary-chart",
         "scope": "zg-column",
-        "description": "Sets the filter summary chart type",
+        "description": "Sets the filter summary chart type. When a chart (bar, pie, or ring) can't render because it has too many nodes, it calls back to `histogram`.",
         "type": "String",
         "enumValues": {
           "bar": "Distribution bar chart",
           "default": "Default chart type for column type",
           "histogram": "Histogram chart",
-          "pie": "Pie chart"
+          "pie": "Pie chart",
+          "ring": "Ring (donut) chart",
+          "toggle": "Toggle switch (boolean or two-option columns only)"
         },
         "defaultValue": "\"default\"",
         "enabledByDefault": false,
@@ -1382,6 +1461,29 @@
         "cascades": {
           "from": [
             "zing-grid:filter-summary-chart"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-lens",
+        "scope": "zg-column",
+        "description": "Adds a lens icon to each filter summary chart. When clicked, an overlay displays a larger, fully interactive version of the chart for easier viewing and filtering. Or set to \"disabled\" to disable for this column only.",
+        "type": "String | Boolean",
+        "enumValues": {
+          "disabled": "Disables the lens icon for this column"
+        },
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:filter-summary-lens"
           ]
         },
         "deprecated": false,
@@ -1421,7 +1523,8 @@
         "enumValues": {
           "alphabetical": "Nodes are sorted alphabetically by their labels",
           "'count": "desc' - Nodes are sorted by count in ascending order (smallest → largest)",
-          "value": "Nodes are sorted by the numeric value represented by their labels",
+          "gradient": "Nodes are sorted in rainbow/gradient order by HSL hue. Only applies to color column type. On non-color columns, a developer alert is logged and the sort falls back to default: count-desc for bar, pie, ring, and toggle charts with 10 or fewer unique nodes; alphabetical for those with more than 10; alphabetical for histogram charts with string values; value for histogram charts with numeric values.",
+          "value": "Nodes are sorted by the numeric value represented by their labels. Only applies to numeric column types.",
           "none": "Nodes retain their original order"
         },
         "defaultValue": "\"default\"",
@@ -1435,6 +1538,29 @@
         "cascades": {
           "from": [
             "zing-grid:filter-summary-node-sort"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-ring-thickness",
+        "scope": "zg-column",
+        "description": "Sets the ring thickness for filter-summary-chart=\"ring\" on this column (0–1, default 0.5).",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "0.5",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:filter-summary-ring-thickness"
           ]
         },
         "deprecated": false,
@@ -3150,6 +3276,30 @@
         "notes": ""
       },
       {
+        "id": "type-row-details-card-mode",
+        "scope": "zg-column",
+        "description": "Sets how the row details open in card mode. `bottom` opens the details\ninside the card itself and allows multiple cards to be open at once. `sidebar` opens a\nshared drawer on the right side of the grid, showing one card's details at a time.",
+        "type": "String",
+        "enumValues": {
+          "bottom": "Details open from the bottom of the card. Multiple cards can be open at once",
+          "sidebar": "Details open in a shared drawer on the right side of the grid. One card at a time"
+        },
+        "defaultValue": "\"bottom\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "from": [
+            "zing-grid:row-details-card-mode"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
         "id": "type-row-details-renderer",
         "scope": "zg-column",
         "description": "Renderer for the row details component\nTo use a custom renderer, the attribute should be set to the name of the function.\nThe renderer function takes in the following arguments, `recordData`, `domRowDetails`, and `rowObject`\nThe returned value of the renderer function is set as the innerHTML of the zg-row-details component.",
@@ -3444,6 +3594,30 @@
             "zing-grid:validation-required-message"
           ]
         },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "validator",
+        "scope": "zg-column",
+        "description": "Sets the validation method for the column.  Overrides the default for the column type",
+        "type": "String",
+        "enumValues": {},
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "type",
+          "validation-error-message"
+        ],
+        "analogousAttributes": [
+          "editor",
+          "filterer",
+          "sorter"
+        ],
+        "cascades": {},
         "deprecated": false,
         "severity": "info",
         "notes": ""
@@ -4341,11 +4515,14 @@
           "batchedit": "\"batchedit\"",
           "batcheditcancel": "\"batcheditcancel\"",
           "batcheditsave": "\"batcheditsave\"",
+          "calendarselection": "\"calendarselection\"",
           "cancel": "\"cancel\"",
           "cancelrecord": "\"cancelrecord\"",
+          "cardresize": "\"cardresize\"",
           "checked": "\"checked\"",
           "checkmark": "\"checkmark\"",
           "close": "\"close\"",
+          "columndrag": "\"columndrag\"",
           "createrecord": "\"createrecord\"",
           "down": "\"down\"",
           "duplicaterecord": "\"duplicaterecord\"",
@@ -4354,12 +4531,16 @@
           "error": "\"error\"",
           "error-tmp": "\"error-tmp\"",
           "filter": "\"filter\"",
+          "filtersummarycardmenu": "\"filtersummarycardmenu\"",
+          "filtersummarymenu": "\"filtersummarymenu\"",
           "firstpage": "\"firstpage\"",
           "fixedmenu": "\"fixedmenu\"",
           "info": "\"info\"",
           "lastpage": "\"lastpage\"",
           "layoutcard": "\"layoutcard\"",
           "layoutrow": "\"layoutrow\"",
+          "lens": "\"lens\"",
+          "closelens": "\"closelens\"",
           "link": "\"link\"",
           "menu": "\"menu\"",
           "nextpage": "\"nextpage\"",
@@ -4373,6 +4554,7 @@
           "openfilterrow": "\"openfilterrow\"",
           "search": "\"search\"",
           "sort": "\"sort\"",
+          "sortmenu": "\"sortmenu\"",
           "submitrecord": "\"submitrecord\"",
           "success": "\"success\"",
           "unchecked": "\"unchecked\"",
@@ -6994,6 +7176,23 @@
         "deprecated": false,
         "severity": "info",
         "notes": ""
+      },
+      {
+        "id": "resetOnDataChange",
+        "scope": "zg-param:name",
+        "description": "If set to false, will not unset page, sort, search, filter, and columns on data change.",
+        "type": "String",
+        "enumValues": {},
+        "defaultValue": false,
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
       }
     ],
     "zg-select": [
@@ -7392,6 +7591,104 @@
         "notes": "Recommended to set features on `<zg-card>` instead."
       },
       {
+        "id": "card-resizable",
+        "scope": "zing-grid",
+        "description": "Enables resizing of cards in card mode. Presence of the attribute sizes cards responsively, within a Min/Max cards-per-row range.\nThe \"fixed\" sizes cards to a single fixed cards-per-row count instead.",
+        "type": "Boolean | String",
+        "enumValues": {
+          "responsive": "Cards are sized responsively, within a Min/Max cards-per-row range",
+          "fixed": "Cards are sized to a single, fixed cards-per-row count"
+        },
+        "defaultValue": "\"responsive\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "card-resizable-fixed",
+        "scope": "zing-grid",
+        "description": "Sets the value of \"Fixed\" cards-per-row. The slider itself always spans 1-6; this only seeds its starting value - dragging it afterwards overrides this. Only applies when `[card-resizable]` is in \"fixed\" mode.",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "4",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "card-resizable-responsive",
+        "scope": "zing-grid",
+        "description": "Sets value of \"Card Size Scale\". Only applies when `[card-resizable]` is in \"responsive\" mode.",
+        "type": "String",
+        "enumValues": {
+          "XS": "Smallest card size (most cards per row)",
+          "S": "Small card size",
+          "M": "Medium card size (the default, no offset from the grid's baseline cards-per-row)",
+          "L": "Large card size",
+          "XL": "Largest card size (fewest cards per row)"
+        },
+        "defaultValue": "\"M\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "card-resizable-responsive-max",
+        "scope": "zing-grid",
+        "description": "Sets the value of \"Card Range\". Accepts a number between 1-6. Only applies when `[card-resizable]` is in \"responsive\" mode.",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "6",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "card-resizable-responsive-min"
+        ],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "card-resizable-responsive-min",
+        "scope": "zing-grid",
+        "description": "Sets the value of \"Card Range\". Accepts a number between 1-6. Only applies when `[card-resizable]` is in \"responsive\" mode.",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "1",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "card-resizable-responsive-max"
+        ],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
         "id": "cell-break",
         "scope": "zing-grid",
         "description": "The type of `word-break` style for body cells. When not set, `cell-break` style is `normal` by default.\nIf the width of a column is set, `cell-break` is `word` by default.\nTo overwrite `cell-break` for cells in a specific column, set `cell-break` for that column.",
@@ -7778,7 +8075,7 @@
       {
         "id": "column-drag",
         "scope": "zing-grid",
-        "description": "Enables column dragging",
+        "description": "Enables column dragging. In card mode, enables dragging card items.",
         "type": "Boolean",
         "enumValues": {},
         "defaultValue": "\"\"",
@@ -7818,6 +8115,27 @@
         "relatedAttributes": [],
         "analogousAttributes": [],
         "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "column-drag-persistent",
+        "scope": "zing-grid",
+        "description": "Presence of attribute displays the column drag icon for all columns without hover",
+        "type": "Boolean",
+        "enumValues": {},
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:drag-persistent"
+          ]
+        },
         "deprecated": false,
         "severity": "info",
         "notes": ""
@@ -8611,13 +8929,16 @@
       {
         "id": "filter-summary-chart",
         "scope": "zing-grid",
-        "description": "Sets the filter summary chart type",
+        "description": "Sets the filter summary chart type. When a chart (bar, pie, or ring) can't render because it has too many nodes, it calls back to `histogram`.",
         "type": "String",
         "enumValues": {
           "bar": "Distribution bar chart",
           "default": "Default chart type for column type",
+          "calendar": "Calendar chart",
           "histogram": "Histogram chart",
-          "pie": "Pie chart"
+          "pie": "Pie chart",
+          "ring": "Ring (donut) chart",
+          "toggle": "Toggle switch (boolean or two-option columns only)"
         },
         "defaultValue": "\"default\"",
         "enabledByDefault": false,
@@ -8632,6 +8953,51 @@
             "zg-column:filter-summary-chart"
           ]
         },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-lens",
+        "scope": "zing-grid",
+        "description": "Adds a lens icon to each filter summary chart. When clicked, an overlay displays a larger, fully interactive version of the chart for easier viewing and filtering.",
+        "type": "Boolean",
+        "enumValues": {},
+        "defaultValue": "\"\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:filter-summary-lens"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-mode",
+        "scope": "zing-grid",
+        "description": "Controls whether applying a filter summary in one column clears the active filter summary in other columns.",
+        "type": "String",
+        "enumValues": {
+          "cumulative": "Each column independently maintains its own active filter summary state (filters are ANDed across columns).",
+          "exclusive": "Only one column can have an active filter summary at a time; activating a node in one column clears the previous column's filter summary."
+        },
+        "defaultValue": "\"cumulative\"",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
         "deprecated": false,
         "severity": "info",
         "notes": ""
@@ -8669,7 +9035,8 @@
         "enumValues": {
           "alphabetical": "Nodes are sorted alphabetically by their labels",
           "'count": "desc' - Nodes are sorted by count in ascending order (smallest → largest)",
-          "value": "Nodes are sorted by the numeric value represented by their labels",
+          "gradient": "Nodes are sorted in rainbow/gradient order by HSL hue. Only applies to color column type. On non-color columns, a developer alert is logged and the sort falls back to default: count-desc for bar, pie, ring, and toggle charts with 10 or fewer unique nodes; alphabetical for those with more than 10; alphabetical for histogram charts with string values; value for histogram charts with numeric values.",
+          "value": "Nodes are sorted by the numeric value represented by their labels. Only applies to numeric column types.",
           "none": "Nodes retain their original order"
         },
         "defaultValue": "\"default\"",
@@ -8685,6 +9052,44 @@
             "zg-column:filter-summary-node-sort"
           ]
         },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-ring-thickness",
+        "scope": "zing-grid",
+        "description": "Sets the ring thickness for filter-summary-chart=\"ring\" (0–1, default 0.5)",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "0.5",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "filter-summary-row-collapsed",
+        "scope": "zing-grid",
+        "description": "Controls whether the filter summary row starts collapsed.",
+        "type": "Boolean",
+        "enumValues": {},
+        "defaultValue": "false",
+        "enabledByDefault": false,
+        "eabledBy": [
+          "filter:summary"
+        ],
+        "alternativeAttributes": [],
+        "relatedAttributes": [],
+        "analogousAttributes": [],
+        "cascades": {},
         "deprecated": false,
         "severity": "info",
         "notes": ""
@@ -8732,6 +9137,54 @@
           "frozen-row-class",
           "head-class",
           "row-class"
+        ],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "frozen-cards-bottom",
+        "scope": "zing-grid",
+        "description": "Sets the number of cards to freeze to the bottom",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "0",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "frozen-cards-top"
+        ],
+        "analogousAttributes": [
+          "frozen-columns-left",
+          "frozen-columns-right",
+          "frozen-rows-top",
+          "frozen-rows-bottom"
+        ],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "frozen-cards-top",
+        "scope": "zing-grid",
+        "description": "Sets the number of cards to freeze to the top",
+        "type": "Number",
+        "enumValues": {},
+        "defaultValue": "0",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "frozen-cards-bottom"
+        ],
+        "analogousAttributes": [
+          "frozen-columns-left",
+          "frozen-columns-right",
+          "frozen-rows-top",
+          "frozen-rows-bottom"
         ],
         "cascades": {},
         "deprecated": false,
@@ -8860,7 +9313,7 @@
       {
         "id": "gridlines",
         "scope": "zing-grid",
-        "description": "Sets vertical, horizontal or both grid lines to the grid when in row mode",
+        "description": "Sets vertical, horizontal or both grid lines to the grid when in row mode. In card mode, sets horizontal lines between card items.",
         "type": "String",
         "enumValues": {
           "both": "Displays both horizontal and vertical gridlines",
@@ -9744,7 +10197,7 @@
       {
         "id": "preserve-state-options",
         "scope": "zing-grid",
-        "description": "Comma separated list of features to save in state preservation.  \nOptions are 'columnfrozen', 'columnposition', 'columnvisibility', 'columnwidth', \n'filter', 'rowgroup', 'layout', 'page', 'pagesize', 'rowfrozen', 'rowgroup', 'rowselector', \n'search', 'selector', 'sort'\nNOTE:  If columnfrozen is set, then columnposition will implicitly be set as well",
+        "description": "Comma separated list of features to save in state preservation.\nOptions are 'cardresize', 'columnfrozen', 'columnposition', 'columnvisibility', 'columnwidth',\n'filter', 'rowgroup', 'layout', 'page', 'pagesize', 'rowfrozen', 'rowgroup', 'rowselector',\n'search', 'selector', 'sort'\nNOTE:  If columnfrozen is set, then columnposition will implicitly be set as well",
         "type": "String",
         "enumValues": {},
         "defaultValue": "\"all\"",
@@ -9757,6 +10210,7 @@
             "preserve-state-load"
           ],
           [
+            "card-resizable",
             "columns-control",
             "column-drag",
             "column-resizable",
@@ -9877,6 +10331,59 @@
           "head-class",
           "zebra"
         ],
+        "cascades": {},
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "row-details-card-mode",
+        "scope": "zing-grid",
+        "description": "Sets how the row details open in card mode. `bottom` opens the details\ninside the card itself and allows multiple cards to be open at once. `sidebar` opens a\nshared drawer on the right side of the grid, showing one card's details at a time.",
+        "type": "String",
+        "enumValues": {
+          "bottom": "Details open from the bottom of the card. Multiple cards can be open at once",
+          "sidebar": "Details open in a shared drawer on the right side of the grid. One card at a time"
+        },
+        "defaultValue": "\"bottom\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "layout:card",
+          "row-details-renderer",
+          "row-details-template"
+        ],
+        "analogousAttributes": [],
+        "cascades": {
+          "to": [
+            "zg-column:type-row-details-card-mode"
+          ]
+        },
+        "deprecated": false,
+        "severity": "info",
+        "notes": ""
+      },
+      {
+        "id": "row-details-card-sidebar-boundary",
+        "scope": "zing-grid",
+        "description": "Sets what bounds the row details drawer opened by\n`[row-details-card-mode=\"sidebar\"]`. `grid` contains the drawer within the grid's\ndimensions. `page` contains it within the width of the page instead.",
+        "type": "String",
+        "enumValues": {
+          "grid": "The drawer is contained by the grid, pinned to the grid's right edge",
+          "page": "The drawer is contained by the page, pinned to the page's right edge"
+        },
+        "defaultValue": "\"grid\"",
+        "enabledByDefault": false,
+        "eabledBy": [],
+        "alternativeAttributes": [],
+        "relatedAttributes": [
+          "layout:card",
+          "row-details-card-mode",
+          "row-details-renderer",
+          "row-details-template"
+        ],
+        "analogousAttributes": [],
         "cascades": {},
         "deprecated": false,
         "severity": "info",
@@ -10476,7 +10983,8 @@
         "relatedAttributes": [
           "viewport",
           "viewport-pause",
-          "viewport-stop"
+          "viewport-stop",
+          "zg-column:card-density-breakpoint"
         ],
         "analogousAttributes": [],
         "cascades": {},

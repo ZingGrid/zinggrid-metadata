@@ -38,6 +38,14 @@
       "requiredAttributes": []
     },
     {
+      "name": "zg-calendar-selection",
+      "description": "The `<zg-calendar-selection>` element is a date range picker overlay that appears when clicking the calendar selection button in a filter summary row.\nIt allows users to select a \"From\" and \"To\" date range to filter date-type columns.\nThe element is dynamically inserted by the library.\nThe element can be styled using CSS.",
+      "allowedChildren": [],
+      "requiredChildren": [],
+      "requiredParent": [],
+      "requiredAttributes": []
+    },
+    {
       "name": "zg-caption",
       "description": "A caption can be manually inserted inside the `<zing-grid>` tag as slotted content or automatically\ninserted when the `caption` is enabled.  `<zg-caption>` is stylable via CSS.",
       "allowedChildren": [
@@ -72,6 +80,14 @@
       "requiredParent": [
         "zing-grid"
       ],
+      "requiredAttributes": []
+    },
+    {
+      "name": "zg-card-resize",
+      "description": "The `<zg-card-resize>` element is a container for the menu that appears when clicking the control bar's card resize button.\nThe element is dynamically inserted by the library.\nThe element can be styled using CSS.",
+      "allowedChildren": [],
+      "requiredChildren": [],
+      "requiredParent": [],
       "requiredAttributes": []
     },
     {
@@ -512,6 +528,14 @@
     {
       "name": "zg-separator",
       "description": "`<zg-separator>` specifies the horizontal bar in the `<zg-menu>` used for separating \nitems.  The element is created dynamically and should not be manually inserted by developers.  However,\n`<zg-separator>` can be styled using CSS.",
+      "allowedChildren": [],
+      "requiredChildren": [],
+      "requiredParent": [],
+      "requiredAttributes": []
+    },
+    {
+      "name": "zg-sort-menu",
+      "description": "The `<zg-sort-menu>` element is a container for the menu that appears when clicking the control bar's sort button.\nThe element is dynamically inserted by the library.\nThe element can be styled using CSS.",
       "allowedChildren": [],
       "requiredChildren": [],
       "requiredParent": [],
